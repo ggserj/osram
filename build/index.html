@@ -13,9 +13,18 @@
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="js/slick/slick.css"/>
+	<link rel="stylesheet" href="js/slick/slick-theme.css"/>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/slick/slick.min.js"></script>
+	<script src="js/script.js"></script>
 </head>
 
 <body>
+
+<!--........................................Home.........................................-->
 
 <header id="home">
 	<div class="bg">
@@ -39,11 +48,10 @@
 				<div class="brand_slogan">открой для себя свет онлайн</div>
 			</div>
 			<div class="tel">
-				<a href="tel:(800) 777-27-00">
-					<i class="tel_icon"></i>
-					<span>(800) 777-27-00</span>
+				<a class="tel_icon" href="tel:(800) 777-27-00">
+					<i class="material-icons yellow">phone_iphone</i><span class="tel_number">(800) 777-27-00</span>
 				</a>
-				<a>Заказать обратный звонок</a>
+				<a class="tel_call yellow">Заказать обратный звонок</a>
 			</div>
 		</div>
 	</section>
@@ -51,73 +59,94 @@
 	<nav class="nav">
 		<div class="container">
 			<ul class="nav_ul">
-				<li><a href="#hits">Хиты продаж</a></li>
-				<li><a href="#calculator">Экономия</a></li>
-				<li><a href="#why">Преимущества</a></li>
-				<li><a href="#steps">Порядок работы</a></li>
-				<li><a href="#delivery">Оплата и доставка</a></li>
-				<li><a href="#about">О компании</a></li>
-				<li><a href="#reviews">Отзывы</a></li>
-				<li><a href="#contacts">Контакты</a></li>
+				<li>
+					<a href="#hits">Хиты продаж</a>
+				</li>
+				<li>
+					<a href="#calculator">Экономия</a>
+				</li>
+				<li>
+					<a href="#why">Преимущества</a>
+				</li>
+				<li>
+					<a href="#steps">Порядок работы</a>
+				</li>
+				<li>
+					<a href="#delivery">Оплата и доставка</a>
+				</li>
+				<li>
+					<a href="#about">О компании</a>
+				</li>
+				<li>
+					<a href="#reviews">Отзывы</a>
+				</li>
+				<li>
+					<a href="#contacts">Контакты</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
 
-	<section class="mainscreen">
-	<div class="container">
-		<h1 class="mainscreen_h1">Cветодиодные лампы OSRAM</h1>
-		<p class="mainscreen_economy">сэкономят до 50 000 <i class="icon-rouble"></i> на электричестве</p>      <!-- h2? -->
-		<p class="mainscreen_forget">Забудьте о замене ламп не меньше, чем <span class="yellow">на 5 лет!</span></p>
-		<button>Быстрая консультация!</button>
-	</div>
-</section>
+	<section class="home">
+		<div class="container">
+			<h1 class="home_h1">Cветодиодные лампы OSRAM
+				<span class="home_economy">сэкономят до 50 000 <i class="icon-rouble"></i> на электричестве</span>
+			</h1>
+			<p class="home_forget">Забудьте о замене ламп не меньше, чем
+				<span class="yellow">на 5 лет!</span>
+			</p>
+			<button class="btn">
+				<span class="btn_span">Быстрая консультация!</span>
+			</button>
+		</div>
+	</section>
 
 	<section class="advantages">
-		<div class="container">
+		<div class="container advantages-slider">
 			<div class="advantage">
-				<div class="advantage_icon"></div>
+				<div class="advantage_icon icon-1"></div>
 				<h3 class="advantage_name">Экономия</h3>
 				<p class="advantage_desc">Потребляет в 8 раз меньше электроэнергии, чем обычная лампа</p>
 			</div>
 
 			<div class="advantage">
-				<div class="advantage_icon"></div>
+				<div class="advantage_icon icon-2"></div>
 				<h3 class="advantage_name">Качество</h3>
 				<p class="advantage_desc">Всего на 30-40 рублей дороже китайских аналогов, при очевидной разнице в качестве</p>
 			</div>
 
 			<div class="advantage">
-				<div class="advantage_icon"></div>
+				<div class="advantage_icon icon-3"></div>
 				<h3 class="advantage_name">Долговечность</h3>
 				<p class="advantage_desc">Минимальный срок службы - 15 000 часов. И даже после этого у ламп будет минимум 70% начального светового потока</p>
 			</div>
 
 			<div class="advantage">
-				<div class="advantage_icon"></div>
+				<div class="advantage_icon icon-4"></div>
 				<h3 class="advantage_name">Приятный оттенок</h3>
 				<p class="advantage_desc">Качественный люминофор дает мягкий свет правильного оттенка, приятный глазу</p>
 			</div>
 
 			<div class="advantage">
-				<div class="advantage_icon"></div>
+				<div class="advantage_icon icon-5"></div>
 				<h3 class="advantage_name">Экологичность</h3>
 				<p class="advantage_desc">Механическая сборка ламп исключает использование клея и гарантирует экологичность ламп</p>
 			</div>
 
 			<div class="advantage">
-				<div class="advantage_icon"></div>
+				<div class="advantage_icon icon-6"></div>
 				<h3 class="advantage_name">Гарантия</h3>
 				<p class="advantage_desc">Гарантия 2 года</p>
 			</div>
 
 			<div class="advantage">
-				<div class="advantage_icon"></div>
+				<div class="advantage_icon icon-7"></div>
 				<h3 class="advantage_name">Строгий контроль</h3>
 				<p class="advantage_desc">Произведены в Китае, под строгим контролем немецкой компании</p>
 			</div>
 
 			<div class="advantage">
-				<div class="advantage_icon"></div>
+				<div class="advantage_icon icon-8"></div>
 				<h3 class="advantage_name">Безопасность</h3>
 				<p class="advantage_desc">Не мерцают, благодаря немецкой электронике, соответствующей всем европейским и российским стандартам безопасности</p>
 			</div>
@@ -127,22 +156,58 @@
 
 </header>
 
+<!--........................................Offer1.........................................-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<section id="offer1">
+	<div class="container">
+		<div class="offer1_description">
+			<h2>БЕСПЛАТНО ПОДБЕРЕМ ПОДХОДЯЩИЙ ВАМ ИСТОЧНИК СВЕТА!</h2>
+			<div class="subtitle">Заявка ни к чему вас не обязывает. Мы заботимся о вашей конфиденциальности, поэтому шифруем все персональные данные.</div>
+		</div>
+		<div class="offer1_form1">
+			<div class="offer1_lamp"></div>
+			<form class="form1">
+				<div class="form1_input">
+					<input type="text" placeholder="Введите Ваше имя" name="name">
+					<i class="material-icons">person</i>
+				</div>
+				<div class="form1_input">
+					<input type="tel" placeholder="Введите Ваш номер телефона" name="phone">
+					<i class="material-icons">phone</i>
+				</div>
+				<div class="form1_input">
+					<p class="form1_text">Когда Вам перезвонить?</p>
+					<select class="form1_input" name="date">
+						<option>Сегодня</option>
+						<option>Завтра</option>
+						<option>Послезавтра</option>
+					</select>
+					<select class="form1_input" name="time">
+						<option>10:00</option>
+						<option>11:00</option>
+						<option>12:00</option>
+						<option>13:00</option>
+						<option>14:00</option>
+						<option>15:00</option>
+						<option>16:00</option>
+						<option>17:00</option>
+						<option>17:30</option>
+					</select>
+				</div>
+				<label>
+					<input type="checkbox" name="iagree" required checked>Я прочитал и согласен с
+					<span>обработкой данных</span>
+					<span class="info">
+						Настоящим вы выражаете свое согласие для использования продавцом или уполномоченным лицом продавца ваших персональных данных, в том числе путем осуществления автоматизированного анализа персональных данных, а также на их передачу различными способами, без ограничения срока действия. В соответствии с п. 5 ст. 21 ФЗ «О персональных данных» настоящее согласие может быть отозвано только при условии письменного уведомления на почту не менее чем за 5 календарных дней до предполагаемой даты прекращения использования персональных данных.
+					</span>
+				</label>
+				<button class="btn" type="submit">
+					<span class="btn_span">Подобрать идеальную лампу!</span>
+				</button>
+			</form>
+		</div>
+	</div>
+</section>
 
 
 </body>

@@ -1,6 +1,442 @@
 body
-	color red
+	font-family: 'Proxima Nova'
+	font-weight: 400
+	font-size: 14px
+	line-height: 1.42857143
 
-	height: 100px
+a
+	text-decoration none
+	&:active,
+	&:hover
+		outline: 0
+
+.container
+	width: 1140px
+	margin: 0 auto
+	padding: 0 15px
+
+$yellow = #ffc501
+
+.yellow
+	color $yellow
+
+@font-face
+	font-family: 'Proxima Nova'
+	src: url('../fonts/ProximaNovaRegular.eot')
+	src: url('../fonts/ProximaNovaRegular.eot') format('embedded-opentype'), url('../fonts/ProximaNovaRegular.ttf') format('truetype'), url('../fonts/ProximaNovaRegular.woff') format('woff'), url('../fonts/ProximaNovaRegular.svg') format('svg')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: 'Proxima Nova'
+	src: url('../fonts/ProximaNovaBold.eot')
+	src: url('../fonts/ProximaNovaBold.eot') format('embedded-opentype'), url('../fonts/ProximaNovaBold.ttf') format('truetype'), url('../fonts/ProximaNovaBold.woff') format('woff'), url('../fonts/ProximaNovaBold.svg') format('svg')
+	font-weight: bold
+	font-style: normal
 
 
+@font-face
+	font-family: 'greyfox'
+	src: url('../fonts/greyfox.eot@uu1b92')
+	src: url('../fonts/greyfox.eot@uu1b92') format('embedded-opentype'), url('../fonts/greyfox.ttf@uu1b92') format('truetype'), url('../fonts/greyfox.woff@uu1b92') format('woff'), url('../fonts/greyfox.svg@uu1b92') format('svg')
+	font-weight: normal
+	font-style: normal
+
+[class^="icon-"]
+	font-family: 'greyfox'
+	speak: none
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	text-transform: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.icon
+	&-greyfox:before
+		content: "\e902"
+	&-rouble
+		vertical-align: middle
+		&:before
+			content: "\62"
+	&-fb
+		&:before
+			content: "\e900"
+		&:after
+			content: "\e901"
+	&-instagram
+		&:before
+			content: "\e903"
+		&:after
+			content: "\e905"
+	&-linkedin
+		&:before
+			content: "\e906"
+		&:after
+			content: "\e909"
+	&-vk
+		&:before
+			content: "\e90a"
+		&:after
+			content: "\e90b"
+	&-youtube
+		&:before
+			content: "\e90c"
+		&:after
+			content: "\e90d"
+
+/* Home
+====================================================================================================*/
+
+header
+	text-align: center
+	position: relative
+	overflow: hidden
+
+.bg
+	z-index -1
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	video
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		z-index: 0
+		width: 1920px
+		left: 50%
+		margin-left: -960px
+		margin-top: -115px
+		background-image: url(../img/bg-header.jpg)
+		background-size: cover
+		background-position: center
+	&:after
+		display: block
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		z-index: 1
+		background-color: rgba(0, 0, 0, 0.86)
+	.lamps
+		position: relative
+		height: 100%
+		width: 1920px
+		left: 50%
+		margin-left: -960px
+		z-index: 2
+		& *
+			position: absolute
+		.lamp1
+			background-image: url(../img/lamps/lamp1.png)
+			width: 109px
+			height: 603px
+			left: 194px
+		.lamp2
+			background-image: url(../img/lamps/lamp2.png)
+			width: 327px
+			height: 866px
+			left: 229px
+		.lamp3
+			background-image: url(../img/lamps/lamp3.png)
+			width: 278px
+			height: 476px
+			left: 355px
+		.lamp4
+			background-image: url(../img/lamps/lamp4.png)
+			width: 93px
+			height: 403px
+			right: 472px
+		.lamp5
+			background-image: url(../img/lamps/lamp5.png)
+			width: 286px
+			height: 798px
+			right: 335px
+		.lamp6
+			background-image: url(../img/lamps/lamp6.png)
+			width: 317px
+			height: 692px
+			right: 138px
+			animation: lampMove 14s ease infinite
+
+@keyframes lampMove
+	0%
+		transform: rotate(14deg) translateX(-120px)
+	50%
+		transform: rotate(-14deg) translateX(120px)
+	100%
+		transform: rotate(14deg) translateX(-120px)
+
+
+.topbar
+	padding: 34px 0
+	background-color: rgba(0, 0, 0, 0.5)
+	text-align: left
+	height: 57.45px // чтоб соответствовало макету, не понимаю почему там выше правая группа
+	.container
+		display flex
+		justify-content space-between
+
+.brand
+	&_logo
+		display: block
+		background-image url(../img/logo.png)
+		width: 204px
+		height: 25px
+		margin-top: 7px
+		background-size: contain
+		background-repeat: no-repeat
+	&_slogan
+		font-size: 15.4px
+		color white
+
+.tel
+	color: white
+	text-align right
+	& *
+		vertical-align: middle
+		display: inline-block
+	&_number
+		color white
+		font-size: 24px
+		font-weight bold
+	&_call
+		position: relative
+		display: inline-block
+		font-size: 16px
+		color: $yellow
+		margin-left: 6px
+		overflow: hidden
+		transition: all 0.225s ease
+		&:after
+			display: block
+			content: ''
+			width: 100%
+			height: 1px
+			background-color: $yellow
+			transition: all 0.225s ease
+		&:focus,
+		&:hover
+			&:after
+				width: 0
+	&_icon
+		display: block
+		font-size: 24px
+		font-weight: bold
+		color: white
+		line-height: 1.1em
+		& i
+			margin-right: 6px
+			transition: all 0.225s ease
+		&:hover i
+			transform: rotate(-30deg)
+
+// justify-content не применяю потому что потом запутаюсь пытаясь сделать пиксель перфект по макету
+.nav
+	background-color $yellow
+	&_ul
+		list-style none
+		display flex
+		margin: 0
+		padding 0
+		li
+			&:first-child>a
+				padding-left 0
+			&:last-child>a
+				padding-right 0
+			&:last-child>a:after
+				display: none
+		a
+			display: block
+			text-transform uppercase
+			font-size: 14px
+			padding: 23px 24px
+			text-decoration none
+			color black
+			transition: all 0.225s ease
+			position relative
+			&:after
+				display: block
+				position: absolute
+				z-index: 1
+				content: ''
+				background-color: white
+				width: 1px
+				height: 16px
+				right: -1px
+				top: 50%
+				margin-top: -8px
+				transition: all 0.225s ease
+			&:hover:after
+				height: 6px
+				width: 6px
+				margin-top: -3px
+				margin-right: -2px
+				background-color: black
+
+.home
+	text-align center
+	&>.container
+		padding-top 170px
+	&_h1
+		font-size: 50px
+		font-weight: bold
+		color: $yellow
+		text-transform: uppercase
+		margin: 0 0 64px 0
+		line-height: 1.1
+	&_economy
+		display: block
+		font-size: 45px
+		color: white;
+		text-transform: none
+	&_forget
+		font-size: 36px
+		color: white
+		margin: 0
+		&:before
+			display: block
+			content: ''
+			position: absolute
+			width: 66px
+			height: 3px
+			background-color: $yellow
+			left: 50%
+			margin-left: -33px
+			margin-top: -27px
+
+.btn
+	position: relative
+	font-size: 16px
+	color: white
+	font-weight: bold
+	text-transform: uppercase
+	background: none
+	border: 0
+	box-shadow: none
+	border-radius: 0
+	padding: 0
+	display: inline-block
+	text-align: center
+	white-space: nowrap
+	vertical-align: middle
+	touch-action: manipulation
+	cursor: pointer
+	box-sizing: border-box
+	line-height: 1.42857143
+	user-select: none
+	-moz-user-select: none
+	&_span
+		position: relative
+		z-index: 2
+		display: inherit
+		background-color: #ffc501
+		padding: 18px 28px
+		letter-spacing: 2px
+		transition: all 0.225s ease
+	&:before
+		display: block
+		position: absolute
+		content: ''
+		width: 100%
+		height: 100%
+		border: 1px solid #ffc501
+		transition: all 0.225s ease
+		transform: rotate(-2deg)
+		box-sizing: border-box
+	&:hover:before,
+	&:focus:before
+		transform: rotate(-4deg)
+	&:hover &_span,
+	&:focus &_span
+		background-color: black
+		color: $yellow
+	&:active:before
+		background-color: $yellow
+
+header .btn
+	margin-top: 56px
+	margin-bottom: 104px
+
+.advantages
+	background-color: rgba(0, 0, 0, 0.5)
+	height 182.267px
+	.advantages-slider
+		box-sizing content-box
+	.slick-arrow
+		width: 30px
+		border: 1px solid white
+		height: 35px
+		background-size: 13px 23px
+		transition: all 0.225s ease
+		background-position: center
+		background-repeat: no-repeat
+		position absolute
+		z-index 10
+		margin-top: -7px
+		&:hover
+			border-color $yellow
+		&:before
+			display none
+	.slick-prev
+		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")
+		left: 25px
+		right: auto
+	.slick-next
+		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")
+		right: 25px
+		left: auto
+
+.advantage
+	color: white
+	padding: 23px 30px
+	outline 0
+	cursor default
+	text-align: left
+	&_icon
+		width: 100px
+		height: 140px
+		float: left
+		background-position: center 40%
+		background-repeat: no-repeat
+		filter: grayscale(100%) brightness(130%)
+		transition: all 0.225s ease
+	& .icon-1
+		background-image url("../img/icons/1.png")
+	& .icon-2
+		background-image url("../img/icons/2.png")
+	& .icon-3
+		background-image url("../img/icons/3.png")
+	& .icon-4
+		background-image url("../img/icons/4.png")
+	& .icon-5
+		background-image url("../img/icons/5.png")
+	& .icon-6
+		background-image url("../img/icons/6.png")
+	& .icon-7
+		background-image url("../img/icons/7.png")
+	& .icon-8
+		background-image url("../img/icons/8.png")
+	&_name
+		font-size: 20px
+		font-weight: bold
+		text-transform: uppercase
+		transition: all 0.225s ease
+		margin-top: 20px
+		margin-bottom: 10px
+		line-height: 1.1
+	&:hover
+		.advantage_icon
+			filter: grayscale(0%) brightness(100%)
+		.advantage_name
+			color $yellow
+	&_desc
+		font-size: 13px
+		padding: 0 15px
+		margin: 0 0 10px 0
