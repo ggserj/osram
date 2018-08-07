@@ -158,53 +158,65 @@
 
 <!--........................................Offer1.........................................-->
 
-<section id="offer1">
+<section class="offer1" id="offer1">
 	<div class="container">
-		<div class="offer1_description">
-			<h2>БЕСПЛАТНО ПОДБЕРЕМ ПОДХОДЯЩИЙ ВАМ ИСТОЧНИК СВЕТА!</h2>
-			<div class="subtitle">Заявка ни к чему вас не обязывает. Мы заботимся о вашей конфиденциальности, поэтому шифруем все персональные данные.</div>
-		</div>
-		<div class="offer1_form1">
-			<div class="offer1_lamp"></div>
-			<form class="form1">
-				<div class="form1_input">
-					<input type="text" placeholder="Введите Ваше имя" name="name">
-					<i class="material-icons">person</i>
+		<div class="bs">
+			<div class="offer1_description">
+				<div class="box">
+					<h2>БЕСПЛАТНО ПОДБЕРЕМ ПОДХОДЯЩИЙ ВАМ ИСТОЧНИК СВЕТА!</h2>
+					<p>Заявка ни к чему вас не обязывает. Мы заботимся о вашей конфиденциальности, поэтому шифруем все персональные данные.</p>
 				</div>
-				<div class="form1_input">
-					<input type="tel" placeholder="Введите Ваш номер телефона" name="phone">
-					<i class="material-icons">phone</i>
-				</div>
-				<div class="form1_input">
-					<p class="form1_text">Когда Вам перезвонить?</p>
-					<select class="form1_input" name="date">
-						<option>Сегодня</option>
-						<option>Завтра</option>
-						<option>Послезавтра</option>
-					</select>
-					<select class="form1_input" name="time">
-						<option>10:00</option>
-						<option>11:00</option>
-						<option>12:00</option>
-						<option>13:00</option>
-						<option>14:00</option>
-						<option>15:00</option>
-						<option>16:00</option>
-						<option>17:00</option>
-						<option>17:30</option>
-					</select>
-				</div>
-				<label>
-					<input type="checkbox" name="iagree" required checked>Я прочитал и согласен с
-					<span>обработкой данных</span>
-					<span class="info">
+			</div>
+			<div class="offer1_form1">
+				<div class="offer1_lamp"></div>
+				<form class="form1">
+					<div class="form1_input">
+						<input type="text" placeholder="Введите Ваше имя" name="name" required>
+						<i class="material-icons">person</i>
+					</div>
+					<div class="form1_input">
+						<input type="tel" placeholder="Введите Ваш номер телефона" name="phone" required>
+						<i class="material-icons">phone</i>
+					</div>
+					<div class="form1_input">
+						<p class="form1_text">Когда Вам перезвонить?</p>
+						<div class="bs">
+							<div class="form1_select-wrap">
+								<select class="form1_input" name="date">
+									<option>Сегодня</option>
+									<option>Завтра</option>
+									<option>Послезавтра</option>
+								</select>
+								<span class="form1_input__arrow"><b></b></span>
+							</div>
+							<div class="form1_select-wrap">
+								<select class="form1_input" name="time">
+									<option>10:00</option>
+									<option>11:00</option>
+									<option>12:00</option>
+									<option>13:00</option>
+									<option>14:00</option>
+									<option>15:00</option>
+									<option>16:00</option>
+									<option>17:00</option>
+									<option>17:30</option>
+								</select>
+								<span class="form1_input__arrow"><b></b></span>
+							</div>
+						</div>
+					</div>
+					<label>
+						<input type="checkbox" name="iagree" required checked>Я прочитал и согласен с
+						<span class="underline">обработкой данных</span>
+						<span class="info">
 						Настоящим вы выражаете свое согласие для использования продавцом или уполномоченным лицом продавца ваших персональных данных, в том числе путем осуществления автоматизированного анализа персональных данных, а также на их передачу различными способами, без ограничения срока действия. В соответствии с п. 5 ст. 21 ФЗ «О персональных данных» настоящее согласие может быть отозвано только при условии письменного уведомления на почту не менее чем за 5 календарных дней до предполагаемой даты прекращения использования персональных данных.
-					</span>
-				</label>
-				<button class="btn" type="submit">
-					<span class="btn_span">Подобрать идеальную лампу!</span>
-				</button>
-			</form>
+						</span>
+					</label>
+					<button class="btn" type="submit">
+						<span class="btn_span">Подобрать идеальную лампу!</span>
+					</button>
+				</form>
+			</div>
 		</div>
 	</div>
 </section>
