@@ -4,40 +4,43 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title></title>
+	<title>Лампочки Osram</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
-	<!--<link rel="apple-touch-icon" href="icon.png">-->
 
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="js/slick/slick.css"/>
 	<link rel="stylesheet" href="js/slick/slick-theme.css"/>
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/style.css">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/slick/slick.min.js"></script>
+	<script src="js/skrollr.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script src="js/script.js"></script>
 </head>
 
 <body>
 
-<!--........................................Home.........................................-->
+<!--........................................header.........................................-->
 
-<header id="home">
-	<div class="bg">
-		<video autoplay loop preload muted>
-			<source src="bgvideo.mp4" type="video/mp4">
+<header id="header" class="header">
+
+	<div class="header-bg">
+		<video autoplay loop preload muted class="header-bg_video">
+			<source src="/img/header/video.mp4" type="video/mp4">
 		</video>
-		<div class="lamps">
-			<div class="lamp1"></div>
-			<div class="lamp2"></div>
-			<div class="lamp3"></div>
-			<div class="lamp4"></div>
-			<div class="lamp5"></div>
-			<div class="lamp6"></div>
+		<div class="header-bg_lamps">
+			<div class="header-bg_lamps header-bg_lamps__1"></div>
+			<div class="header-bg_lamps header-bg_lamps__2"></div>
+			<div class="header-bg_lamps header-bg_lamps__3"></div>
+			<div class="header-bg_lamps header-bg_lamps__4"></div>
+			<div class="header-bg_lamps header-bg_lamps__5"></div>
+			<div class="header-bg_lamps header-bg_lamps__6"></div>
 		</div>
 	</div>
 
@@ -158,39 +161,39 @@
 
 <!--........................................Offer1.........................................-->
 
-<section class="offer1" id="offer1">
+<section class="offer" id="offer">
 	<div class="container">
 		<div class="bs">
-			<div class="offer1_description">
+			<div class="offer_description">
 				<div class="box">
 					<h2>БЕСПЛАТНО ПОДБЕРЕМ ПОДХОДЯЩИЙ ВАМ ИСТОЧНИК СВЕТА!</h2>
 					<p>Заявка ни к чему вас не обязывает. Мы заботимся о вашей конфиденциальности, поэтому шифруем все персональные данные.</p>
 				</div>
 			</div>
-			<div class="offer1_form1">
-				<div class="offer1_lamp"></div>
-				<form class="form1">
-					<div class="form1_input">
+			<div class="offer_form">
+				<div class="offer_lamp"></div>
+				<form class="form">
+					<div class="form_input">
 						<input type="text" placeholder="Введите Ваше имя" name="name" required>
 						<i class="material-icons">person</i>
 					</div>
-					<div class="form1_input">
+					<div class="form_input">
 						<input type="tel" placeholder="Введите Ваш номер телефона" name="phone" required>
 						<i class="material-icons">phone</i>
 					</div>
-					<div class="form1_input">
-						<p class="form1_text">Когда Вам перезвонить?</p>
+					<div class="form_input">
+						<p class="form_text">Когда Вам перезвонить?</p>
 						<div class="bs">
-							<div class="form1_select-wrap">
-								<select class="form1_input" name="date">
+							<div class="form_select-wrap">
+								<select class="form_input" name="date">
 									<option>Сегодня</option>
 									<option>Завтра</option>
 									<option>Послезавтра</option>
 								</select>
-								<span class="form1_input__arrow"><b></b></span>
+								<span class="form_input__arrow"><b></b></span>
 							</div>
-							<div class="form1_select-wrap">
-								<select class="form1_input" name="time">
+							<div class="form_select-wrap">
+								<select class="form_input" name="time">
 									<option>10:00</option>
 									<option>11:00</option>
 									<option>12:00</option>
@@ -201,7 +204,7 @@
 									<option>17:00</option>
 									<option>17:30</option>
 								</select>
-								<span class="form1_input__arrow"><b></b></span>
+								<span class="form_input__arrow"><b></b></span>
 							</div>
 						</div>
 					</div>
@@ -221,7 +224,638 @@
 	</div>
 </section>
 
+<!--........................................Hits.........................................-->
 
+<section class="hits" id="hits">
+	<!--<div class="bg">-->
+		<div class="lamp"></div>
+	<!--</div>-->
+	<div class="container">
+		<h2>Хиты продаж!</h2>
+		<div class="filter">
+			<span>Мне нужна лампа: </span>
+			<div class="filter_select-wrap">
+				<select>
+					<option data-link="https://skladlamp.ru/catalog/svetodiodnye-lampy--8926/f_1071280">на замену лампочки накаливания</option>
+					<option data-link="https://skladlamp.ru/catalog/svetodiodnye-lampy--8926/f_1071296">на замену галогеновой лампочки</option>
+				</select>
+				<span class="filter__arrow"><b></b></span>
+			</div>
+		</div>
+
+		<div class="items incandescent">
+
+			<div class="item">
+				<a href="#" class="image"><img src="../img/OSRAM-54W.png" alt=""></a>
+				<h3>OSRAM 5,4W<br/>Аналог лампы 40W</h3>
+				<div class="price">86 <i class="icon-rouble"></i></div>
+				<a href="#" target="_blank" class="btn btn-default external-button"><span class="btn_span">Подробнее</span></a>
+			</div>
+
+			<div class="item">
+				<a href="#" class="image"><img src="../img/OSRAM-68W.png" alt=""></a>
+				<h3>OSRAM 6,8W<br/>Аналог лампы 60W</h3>
+				<div class="price">105 <i class="icon-rouble"></i></div>
+				<a href="#" target="_blank" class="btn btn-default external-button"><span class="btn_span">Подробнее</span></a>
+			</div>
+
+			<div class="item">
+				<a href="#" class="image"><img src="../img/OSRAM-95W.png" alt=""></a>
+				<h3>OSRAM 9,0W<br/>Аналог лампы 75W</h3>
+				<div class="price">106 <i class="icon-rouble"></i></div>
+				<a href="#" target="_blank" class="btn btn-default external-button"><span class="btn_span">Подробнее</span></a>
+			</div>
+
+			<div class="item">
+				<a href="#" class="image"><img src="../img/OSRAM-115W.png" alt=""></a>
+				<h3>OSRAM 10,5W<br/>Аналог лампы 100</h3>
+				<div class="price">139 <i class="icon-rouble"></i></div>
+				<a href="#" target="_blank" class="btn btn-default external-button"><span class="btn_span">Подробнее</span></a>
+			</div>
+
+			<div class="item">
+				<a href="#" class="image"><img src="../img/OSRAM-54W2.png" alt=""></a>
+				<h3>OSRAM 5,7W<br/>Аналог лампы 40W</h3>
+				<div class="price">86 <i class="icon-rouble"></i></div>
+				<a href="#" target="_blank" class="btn"><span class="btn_span">Подробнее</span></a>
+			</div>
+
+		</div>
+		<div class="items halogen hidden">
+
+			<div class="item">
+				<a href="#" class="image"><img src="../img/OSRAM-PAR16-36W-220V-GU10.png" alt=""></a>
+				<h3>OSRAM PAR16 3,6W<br/>220V GU10</h3>
+				<div class="price">88 <i class="icon-rouble"></i></div>
+				<a href="#" target="_blank" class="btn"><span class="btn_span">Подробнее</span></a>
+			</div>
+
+			<div class="item">
+				<a href="#" class="image"><img src="../img/OSRAM-PAR16-48W-220V-GU10.png" alt=""></a>
+				<h3>OSRAM PAR16 4,8W<br/>220V GU10</h3>
+				<div class="price">97 <i class="icon-rouble"></i></div>
+				<a href="#" target="_blank" class="btn"><span class="btn_span">Подробнее</span></a>
+			</div>
+
+			<div class="item">
+				<a href="#" class="image"><img src="../img/OSRAM-MR16-5W-12V-GU5.3-3000К.png" alt=""></a>
+				<h3>OSRAM MR16 5W<br/>12V GU5.3 3000К</h3>
+				<div class="price">144 <i class="icon-rouble"></i></div>
+				<a href="#" target="_blank" class="btn"><span class="btn_span">Подробнее</span></a>
+			</div>
+
+			<div class="item">
+				<a href="#" class="image"><img src="../img/OSRAM-MR16-5W-12V-GU5.3-3000К.png" alt=""></a>
+				<h3>OSRAM MR16 5W<br/>12V GU5.3 5000К</h3>
+				<div class="price">144 <i class="icon-rouble"></i></div>
+				<a href="#" target="_blank" class="btn"><span class="btn_span">Подробнее</span></a>
+			</div>
+
+			<div class="item">
+				<a href="#" class="image"><img src="../img/OSRAM-MR16-75W-230V-GU5.3-2700К.png" alt=""></a>
+				<h3>OSRAM MR16 4,2W<br/>230V GU5.3 3000К</h3>
+				<div class="price">90 <i class="icon-rouble"></i></div>
+				<a href="#" target="_blank" class="btn"><span class="btn_span">Подробнее</span></a>
+			</div>
+
+
+		</div>
+
+		<button class="btn btn-more"><span class="btn_span">Показать больше товаров<br/>в нашем интернет-магазине!</span></button>
+	</div>
+</section>
+
+<!--........................................calculator.........................................-->
+
+<section id="calculator">
+	<div class="container">
+		<h2>эта &quot;машина времени&quot; покажет,<br/>сколько вы сэкономите</h2>
+		<div class="bs">
+			<div class="item">
+				<h3>ОБЫЧНЫЕ ЛАМПЫ</h3>
+				<div class="lamp simple"></div>
+				<div class="text">Потрачено рублей</div>
+				<div class="cost">
+					<span class="value">0</span>
+					<span class="measure"><i class="icon-rouble"></i></span>
+				</div>
+				<div class="cost-visual" style="width: 0%"></div>
+			</div>
+			<div class="item">
+				<h3>ЛАМПЫ OSRAM</h3>
+				<div class="lamp osram"></div>
+				<div class="text">Потрачено рублей</div>
+				<div class="cost">
+					<span class="value">0</span>
+					<span class="measure"><i class="icon-rouble"></i></span>
+				</div>
+				<div class="cost-visual" style="width: 0%"></div>
+			</div>
+		</div>
+		<div class="bs">
+			<div class="item"></div>
+			<div class="item">
+				<div class="btn btn-start">
+					<span class="btn_span">Пуск!</span>
+				</div>
+			</div>
+			<div class="item">
+				<div class="switcher">
+					<span>Рубли</span>
+					<label class="switch">
+						<input type="checkbox">
+						<div class="slider round"></div>
+					</label>
+					<span>Ватты</span>
+				</div>
+			</div>
+		</div>
+		<div class="timeline">
+			<div class="active"></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="total">
+			<div class="text">
+				<span class="yellow">За <span class="years">3</span> <span class="word">года</span></span> вы сэкономите
+			</div>
+			<div class="value">
+				<span class="number">33 444</span>
+				<span><i class="icon-rouble"></i></span>
+			</div>
+		</div>
+	</div>
+	<a href="index.html#modal-calculation" data-toggle="modal" role="button" class="open-detail"><span>Посмотреть подробный расчет</span></a>		</div>
+</section>
+
+<!--........................................why.........................................-->
+
+<section id="why">
+	<div class="container">
+		<h2>С НАМИ ЛЕГКО, УДОБНО И ВЫГОДНО!</h2>
+		<div class="items">
+			<div class="item">
+				<div class="wrap">
+					<i class="number">1</i>
+					<h3>ПОЖАЛУЙ, САМЫЕ ВЫГОДНЫЕ ЦЕНЫ НА РЫНКЕ</h3>
+					<p>Прямые контракты с производителями позволяют нам устанавливать цены, которые наши покупатели называют &quot;очень дешево&quot;</p>
+				</div>
+			</div>
+			<div class="item">
+				<div class="wrap">
+					<i class="number">2</i>
+					<h3>ВЕСЬ ТОВАР В НАЛИЧИИ</h3>
+					<p>Наш склад настолько вместительный, что обслуживает 20% всех российский оптовых компаний</p>
+				</div>
+			</div>
+			<div class="item">
+				<div class="wrap">
+					<i class="number">3</i>
+					<h3>ПРЕДЛАГАЕМ ПРОВЕРЕННУЮ ВРЕМЕНЕМ И ОПЫТОМ ПОКУПАТЕЛЕЙ ПРОДУКЦИЮ</h3>
+					<p>Мы тщательно проверяем качество своих ламп и следим за отзывами покупателей, чтобы в вашем доме было всегда светло</p>
+				</div>
+			</div>
+			<div class="item">
+				<div class="wrap">
+					<i class="number">4</i>
+					<h3>ОПЫТНЫЕ СПЕЦИАЛИСТЫ В ЭЛЕКТРОТЕХНИКЕ ПОМОГУТ ПРОФЕССИОНАЛЬНОЙ КОНСУЛЬТАЦИЕЙ</h3>
+					<p>С нашим ассортиментом и профессиональными знаниями реально найти изящное решение для любых задач по освещению</p>
+				</div>
+			</div>
+			<div class="item">
+				<div class="wrap">
+					<i class="number">5</i>
+					<h3>ЕДИНСТВЕННЫЕ, КТО ДОСТАВЛЯЕТ ЧЕРЕЗ ЕВРОСЕТЬ В ЛЮБОЙ ГОРОД РФ</h3>
+					<p>Аккуратная доставка от 4 дней обойдется до 10 раз дешевле, чем через Почту России!</p>
+				</div>
+			</div>
+			<div class="item">
+				<div class="wrap">
+					<i class="number">6</i>
+					<h3>ЛЮБЫЕ СПОСОБЫ ОПЛАТЫ</h3>
+					<p>Принимаем виртуальне деньги, банковские карты, СМС и наличные при получении заказа</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--........................................offer2.........................................-->
+
+<section class="offer" id="offer2">
+	<div class="container">
+		<div class="bs">
+			<div class="offer_description">
+				<div class="box">
+					<h2>Оставьте заявку на бесплатный подбор ламп и получите скидку <span class="yellow">от 7%!</span></h2>
+					<p>Заявка ни к чему вас не обязывает. Мы заботимся о вашей конфиденциальности, поэтому шифруем все персональные данные.</p>
+				</div>
+			</div>
+			<div class="offer_form">
+				<div class="offer_lamp"></div>
+				<form class="form">
+					<div class="form_input">
+						<div class="bs">
+							<div class="form_select-wrap">
+								<p class="form_text">Площадь помещения</p>
+								<select class="form_input" name="area">
+									<option>25 м кв.</option>
+									<option>30 м кв.</option>
+									<option>45 м кв.</option>
+								</select>
+								<span class="form_input__arrow"><b></b></span>
+							</div>
+							<div class="form_select-wrap">
+								<p class="form_text">Температура света</p>
+								<select class="form_input" name="temperature">
+									<option>Теплый</option>
+									<option>Холодный</option>
+								</select>
+								<span class="form_input__arrow"><b></b></span>
+							</div>
+						</div>
+					</div>
+					<div class="form_input">
+						<input type="text" placeholder="Введите Ваше имя" name="name" required>
+						<i class="material-icons">person</i>
+					</div>
+					<div class="form_input">
+						<input type="tel" placeholder="Введите Ваш номер телефона" name="phone" required>
+						<i class="material-icons">phone</i>
+					</div>
+					<label>
+						<input type="checkbox" name="iagree" required checked>Я прочитал и согласен с
+						<span class="underline">обработкой данных</span>
+						<span class="info">
+						Настоящим вы выражаете свое согласие для использования продавцом или уполномоченным лицом продавца ваших персональных данных, в том числе путем осуществления автоматизированного анализа персональных данных, а также на их передачу различными способами, без ограничения срока действия. В соответствии с п. 5 ст. 21 ФЗ «О персональных данных» настоящее согласие может быть отозвано только при условии письменного уведомления на почту не менее чем за 5 календарных дней до предполагаемой даты прекращения использования персональных данных.
+						</span>
+					</label>
+					<button class="btn" type="submit">
+						<span class="btn_span">Попробовать лампы<br/>и получить скидку!</span>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--........................................steps.........................................-->
+
+<section id="steps" class="inverse">
+	<div class="container">
+		<h2>Сделать заказ у нас проще,<br> чем заменить лампочку!
+			<span class="yellow">:)</span>
+		</h2>
+		<div class="items">
+			<div class="items">
+				<div class="item">
+					<i class="step_1"></i>
+					<h3>Шаг 1</h3>
+					<p>Позвоните нам, оставьте<br/> заявку или закажите<br/> обратный звонок
+					</p>
+				</div>
+				<div class="item">
+					<i class="step_2"></i>
+					<h3>Шаг 2</h3>
+					<p>Наш специалист по электротехнике подберет вам подходящие лампы</p>
+				</div>
+			</div>
+			<div class="items">
+				<div class="item">
+					<i class="step_3"></i>
+					<h3>Шаг 3</h3>
+					<p>Подтверждаете заказ по электронной почте или согласуете детали с менеджером</p>
+				</div>
+				<div class="item">
+					<i class="step_4"></i>
+					<h3>Шаг 4</h3>
+					<p>Забираете заказ</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--........................................delivery.........................................-->
+
+<section id="delivery">
+	<div class="container">
+		<h2>ДОСТАВКА И ОПЛАТА</h2>
+		<div class="items">
+			<div class="item">
+				<h3>
+					<span>ДОСТАВКА</span>
+				</h3>
+				<div class="items">
+					<div class="delivery-item">
+						<div class="delivery-item_icon delivery-item_icon__1"></div>
+						<h4>Стоимость доставки</h4>
+						<div class="delivery-item_info">
+							<i class="delivery-item_eye"></i>
+							<div class="delivery-item_desc">
+								<div class="delivery-item_text">
+									Бесплатно доставляем до приемных пунктов транспортной компании Деловые Линии, СДЭК, Евросесть и пункта самовывоза на Михалковской 48, а также до клиента в Москве при сумме заказа от 20т.р.<br/> От 140 рублей - стоимость доставки товара в регионы РФ через Евросеть, СДЭК и Деловые Линии (срок от 4-х дней).<br/> От 390 рублей - доставка по Москве на следующий рабочий день.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="delivery-item">
+						<div class="delivery-item_icon delivery-item_icon__2"></div>
+						<h4>Условия доставки</h4>
+						<div class="delivery-item_info">
+							<i class="delivery-item_eye"></i>
+							<div class="delivery-item_desc">
+								<div class="delivery-item_text">
+									Доставка осуществляется с 9-30 до 18-00 на следующий рабочий день после совершения заказа - как к клиентам, так и в пункты приёмов товара Деловых Линий, Евросеть и СДЭК. Кому, как не компании, которая 13 лет закупает и доставляет световое оборудование, известно, насколько бережно необходимо перевозить лампы? Мы не понаслышке знаем, насколько обидно получать битое стекло в посылке. Поэтому к каждому заказу мы относимся с особым отношением. Бригада опытных грузчиков аккуратно упакует ваш товар, а специализированный транспорт бережно перевезет хрупкое оборудование в самые отдаленные уголки нашей страны.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="delivery-item">
+						<div class="delivery-item_icon delivery-item_icon__3"></div>
+						<h4>Самовывоз</h4>
+						<div class="delivery-item_info">
+							<i class="delivery-item_eye"></i>
+							<div class="delivery-item_desc">
+								<div class="delivery-item_text">
+									Забрать продукцию в день заказа вы сможете на нашем складе в Шереметьево (адрес), и это бесплатно! На следующий рабочий день можно будет забрать из пункта самовывоза в Москве (адрес), и это тоже бесплатно! Из любого почтомата или пункта самовывоза СДЭК, а также в любом салоне сотовой связи Евросеть в любом регионе РФ, и стоит это сущие копейки!* (Стоимость автоматически считается в корзине)
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<h3>
+					<span>ОПЛАТА</span>
+				</h3>
+				<div class="items">
+					<div class="delivery-item">
+						<div class="delivery-item_icon delivery-item_icon__4"></div>
+						<h4>Наличными</h4>
+						<div class="delivery-item_info">
+							<i class="delivery-item_eye"></i>
+							<div class="delivery-item_desc">
+								<div class="delivery-item_text">
+									Оплатить наличными можно:<br/> - На складе в Шереметьево.<br/> - В нашем пункте самовывоза на Михалковской 48.<br/> - В любом салоне Евросети.<br/> - В любом пункте самовывоза СДЭК.<br/> - Курьеру при доставке товара.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="delivery-item">
+						<div class="delivery-item_icon delivery-item_icon__5"></div>
+						<h4>Банковской картой</h4>
+						<div class="delivery-item_info">
+							<i class="delivery-item_eye"></i>
+							<div class="delivery-item_desc">
+								<div class="delivery-item_text">
+									Мы принимаем к оплате платежные карты Visa и MasterCard<br/> Оплатить заказ вы можете в нашем интернет-магазине, когда оформите заказ – для этого потребуется выбрать соответствующий раздел. Также вы можете запросить ссылку для оплаты банковской картой у менеджера.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="delivery-item">
+						<div class="delivery-item_icon delivery-item_icon__6"></div>
+						<h4>Электронными деньгами</h4>
+						<div class="delivery-item_info">
+							<i class="delivery-item_eye"></i>
+							<div class="delivery-item_desc">
+								<div class="delivery-item_text">
+									Мы принимаем моментальные платежи без комиссии через системы Яндекс.Деньги и WebMoney:<br/> 1. Оформляете заказ<br/> 2. Выбираете способ оплаты &quot;Электронные деньги&quot;<br/> 3. Дожидаетесь звонка нашего менеджера и озвучиваете, через какую платежную систему вы бы хотели произвести оплату.<br/> Получаете на электронную почту ссылку для оплаты заказа.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--........................................about.........................................-->
+
+<section id="about" class="about">
+	<div class="bg">
+		<div class="lamp1"></div>
+		<div class="lamp2"></div>
+		<div class="lamp3"></div>
+		<div class="lamp4" data-top-top="top: 1500px; left: -100px" data-top-bottom="top: 300px; left: 100px"></div>
+		<div class="lamp5" data-top-top="top: 1500px; right: -100px" data-top-bottom="top: -200px; right: 300px"></div>
+	</div>
+	<div class="container">
+		<h2>О КОМПАНИИ</h2>
+		<div class="items">
+			<div class="item about-item1">
+				<div class="about_img"></div>
+			</div>
+			<div class="item about-item2">
+				<div class="about_text">
+					Мы предлагаем светодиодные лампы немецкой компании Osram. Эти качественные источники света стоят недорого благодаря производству в Китае, при этом строжайший контроль немецких специалистов гарантирует полное отсутствие брака.<br/>
+					<br/> Светодиодные лампы потребляют почти в 8 раз меньше электричества, чем обычные лампочки. Они сэкономят вам десятки тысяч рублей в год, а благодаря качественным компонентам и филигранной сборке менять их просто не придется.<br/>
+					<br/> Наши онлайн-консультанты и специалисты всегда готовы ответить на любые вопросы и подобрать источники света, которые будут точно соответствовать вашим запросам. Они настолько подкованы в этих вопросах, что даже ночью спросонья они правильно рассчитают закарнизную люминесцентную подсветку и электронные пускорегулирующие аппараты к ним :) (Но ночью их лучше все-таки не будить, пусть отдыхают).<br/>
+					<br/> Конечно, самое важное при заказе ламп - это их сохранность во время доставки. Мы - единственные, кто делает доставку в любой салон Евросети с помощью их внутренней логистики. Поэтому вы получите свои лампы в 4 раза быстрее и заплатите за доставку в 10 раз меньше, чем при заказе через Почту России. Не говоря уже о том, что ваш товар будет в целости и сохранности!
+				</div>
+			</div>
+		</div>
+		<div class="about_text-bottom">
+			ВЕСЬ АССОРТИМЕНТ ЛАМП OSRAM ВЫ НАЙДЕТЕ<br/> В НАШЕМ ИНТЕРНЕТ-МАГАЗИНЕ:
+		</div>
+		<div class="center">
+			<a href="https://skladlamp.ru/catalog/lampy-11095/f_1065694/" target="_blank" class="btn"><span class="btn_span">Перейти в интернет-магазин!</span></a>
+		</div>
+	</div>
+</section>
+
+<!--........................................numbers.........................................-->
+
+<section id="numbers" class="numbers">
+	<div class="container">
+		<div class="items">
+			<div class="item numbers-item">
+				<div class="numbers-item_icon numbers-item_icon__1"></div>
+				<div class="numbers-item_pretitle">УСПЕШНОЙ<br/> РАБОТЫ</div>
+				<div class="numbers-item_number">13</div>
+				<div class="numbers-item_subtitle">ЛЕТ</div>
+			</div>
+			<div class="item numbers-item">
+				<div class="numbers-item_icon numbers-item_icon__2"></div>
+				<div class="numbers-item_pretitle">НАШИ ЛАМПЫ И СВЕТИЛЬНИКИ<br/> ОСВЕЩАЮТ</div>
+				<div class="numbers-item_number">20</div>
+				<div class="numbers-item_subtitle">% РОССИИ</div>
+			</div>
+			<div class="item numbers-item">
+				<div class="numbers-item_icon numbers-item_icon__3"></div>
+				<div class="numbers-item_pretitle">В НАШЕЙ КОМПАНИИ<br/> ТРУДИТСЯ</div>
+				<div class="numbers-item_number" >500</div>
+				<div class="numbers-item_subtitle">СОТРУДНИКОВ</div>
+			</div>
+			<div class="item numbers-item">
+				<div class="numbers-item_icon numbers-item_icon__4"></div>
+				<div class="numbers-item_pretitle">РАБОТАЕМ С ПРОДУКТАМИ<br/> НЕМЕЦКОГО БРЕНДА OSRAM</div>
+				<div class="numbers-item_number">10</div>
+				<div class="numbers-item_subtitle">ЛЕТ</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--........................................certificates.........................................-->
+
+<section id="certificates" class="certificates">
+	<div class="container">
+		<h2>Сертификаты</h2>
+		<div class="certificates-slider">
+			<a class="certificates-item" href="/img/certificates/1.jpg" data-fancybox="certificates">
+				<div class="certificates-item_img certificates-item_img__1"></div>
+			</a>
+			<a class="certificates-item" href="/img/certificates/2.jpg" data-fancybox="certificates">
+				<div class="certificates-item_img certificates-item_img__2"></div>
+			</a>
+			<a class="certificates-item" href="/img/certificates/3.jpg" data-fancybox="certificates">
+				<div class="certificates-item_img certificates-item_img__3"></div>
+			</a>
+			<a class="certificates-item" href="/img/certificates/4.jpg" data-fancybox="certificates">
+				<div class="certificates-item_img certificates-item_img__4"></div>
+			</a>
+			<a class="certificates-item" href="/img/certificates/5.jpg" data-fancybox="certificates">
+				<div class="certificates-item_img certificates-item_img__5"></div>
+			</a>
+			<a class="certificates-item" href="/img/certificates/6.jpg" data-fancybox="certificates">
+				<div class="certificates-item_img certificates-item_img__6"></div>
+			</a>
+			<a class="certificates-item" href="/img/certificates/7.jpg" data-fancybox="certificates">
+				<div class="certificates-item_img certificates-item_img__7"></div>
+			</a>
+			<a class="certificates-item" href="/img/certificates/8.jpg" data-fancybox="certificates">
+				<div class="certificates-item_img certificates-item_img__8"></div>
+			</a>
+			<a class="certificates-item" href="/img/certificates/9.jpg" data-fancybox="certificates">
+				<div class="certificates-item_img certificates-item_img__9"></div>
+			</a>
+			<a class="certificates-item" href="/img/certificates/10.jpg" data-fancybox="certificates">
+				<div class="certificates-item_img certificates-item_img__10"></div>
+			</a>
+			<a class="certificates-item" href="/img/certificates/11.jpg" data-fancybox="certificates">
+				<div class="certificates-item_img certificates-item_img__11"></div>
+			</a>
+			<a class="certificates-item" href="/img/certificates/12.jpg" data-fancybox="certificates">
+				<div class="certificates-item_img certificates-item_img__12"></div>
+			</a>
+			<a class="certificates-item" href="/img/certificates/13.jpg" data-fancybox="certificates">
+				<div class="certificates-item_img certificates-item_img__13"></div>
+			</a>
+		</div>
+	</div>
+</section>
+
+<!--........................................reviews.........................................-->
+
+<section id="reviews" class="reviews">
+	<div class="container">
+		<h2>Отзывы наших клиентов</h2>
+		<div class="reviews-slider">
+			<div class="reviews-item">
+				<div class="items">
+					<div class="item reviews_msg">
+						<div class="reviews_text">Оплата мастеркард. Заказала доставку в постомат (в Москве) и забрала рядом с домом в удобное время, и цена получилась за доставку минимальная. Удобно. Смской предупредили, когда истекал срок нахождения моего заказика в камере постомата с указанием адреса ячеек.</div>
+					</div>
+					<div class="item reviews_author">
+						<div class="reviews_photo reviews_photo__1"></div>
+						<div class="reviews_name">Ирина</div>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-item">
+				<div class="items">
+					<div class="item reviews_msg">
+						<div class="reviews_text">Выбирал лампы для коттеджа. Только его построили, закончили проводку, нужно было сразу 38 лампочек. Заказал светодиодные (слышал что экономичные и долго живут). Пришли в Екатеринбург за неделю, все целы, упакованы так будто это хрустальные вазы из музея. Лампы хорошие, сделаны добротно, выдают приятный и спокойный свет, при этом достаточно яркий. Стоят уже месяц, полет нормальный!</div>
+					</div>
+					<div class="item reviews_author">
+						<div class="reviews_photo reviews_photo__2"></div>
+						<div class="reviews_name">Максим Евгеньевич</div>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-item">
+				<div class="items">
+					<div class="item reviews_msg">
+						<div class="reviews_text">Очень подробно оформленный сайт (даже блондинка без труда выберет себе лампочку)), оперативный и вежливый ответ сотрудника, удобный лично для меня вариант покупки - оплатить онлайн и прислать потом курьера.</div>
+					</div>
+					<div class="item reviews_author">
+						<div class="reviews_photo reviews_photo__3"></div>
+						<div class="reviews_name">Алиса</div>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-item">
+				<div class="items">
+					<div class="item reviews_msg">
+						<div class="reviews_text">Огромный выбор - все можно купить в одном месте. Квалифицированная консультация и вежливые сотрудники. Общалась с менеджером из интернет-магазина. Из огромного ассортимента мне посоветовали именно то, что в итоге идеально подошло и под интерьер и по финансам.</div>
+					</div>
+					<div class="item reviews_author">
+						<div class="reviews_photo reviews_photo__4"></div>
+						<div class="reviews_name">Вика</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--........................................contacts.........................................-->
+
+<section id="contacts" class="contacts">
+	<div class="contacts-bar">
+		<div class="container">
+			<div class="items">
+				<div class="contacts-item">
+					<i class="contacts-item_icon material-icons">phone</i>
+					<a  class="contacts-item_text" href="tel:(800) 777-27-00">(800) 777-27-00</a>
+				</div>
+				<div class="contacts-item">
+					<i class="contacts-item_icon material-icons">mail</i>
+					<a  class="contacts-item_text" href="mailto:info@skladlamp.ru">info@skladlamp.ru</a>
+				</div>
+				<div class="contacts-item">
+					<i class="contacts-item_icon material-icons">placeholder</i>
+					<span class="contacts-item_text">г. Москва, ул Михалковская, д. 48</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--здесь должны были быть гугл карты, но с июля 2018 года квота на бесплатное использование их api - 1 загрузка карты в сутки-->
+	<!--обертка у карт для удобной блокировки скролла-->
+	<div id="map-wrap" class="map-wrap">
+		<div id="map" class="map"></div>
+	</div>
+</section>
+
+<!--........................................footer.........................................-->
+
+<footer class="footer">
+	<div class="container">
+		<div class="items">
+			<div class="item brand">
+				<a class="brand_logo" href="#"></a>
+				<div class="brand_slogan">открой для себя свет онлайн</div>
+			</div>
+			<div class="item developer">
+				Сделал <span class="developer_name">ggserj</span>
+			</div>
+			<div class="item social-links">
+				<a href="#" class="social-links_link social-links_link__vk"></a>
+				<a href="#" class="social-links_link social-links_link__fb"></a>
+				<a href="#" class="social-links_link social-links_link__tw"></a>
+				<a href="#" class="social-links_link social-links_link__inst"></a>
+				<a href="#" class="social-links_link social-links_link__od"></a>
+				<a href="#" class="social-links_link social-links_link__pin"></a>
+			</div>
+		</div>
+	</div>
+</footer>
 </body>
 
 </html>

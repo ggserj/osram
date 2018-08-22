@@ -1,20 +1,5 @@
-body
-	font-family: 'Proxima Nova'
-	font-weight: 400
-	font-size: 14px
-	line-height: 1.42857143
-
-a
-	text-decoration none
-	&:active,
-	&:hover
-		outline: 0
-
-.container
-	width: 1170px
-	margin: 0 auto
-	padding: 0 15px
-	box-sizing: border-box
+/* reset & general
+====================================================================================================*/
 
 $yellow = #ffc501
 $lblack = #464646
@@ -23,233 +8,279 @@ $formblack = #171717
 $grey = #aaaaaa
 $white = #efefef
 
-.yellow
-	color $yellow
+@font-face
+	font-family 'Proxima Nova'
+	src url('../fonts/ProximaNovaRegular.eot')
+	src url('../fonts/ProximaNovaRegular.eot') format('embedded-opentype'), url('../fonts/ProximaNovaRegular.ttf') format('truetype'), url('../fonts/ProximaNovaRegular.woff') format('woff'), url('../fonts/ProximaNovaRegular.svg') format('svg')
+	font-weight normal
+	font-style normal
 
 @font-face
-	font-family: 'Proxima Nova'
-	src: url('../fonts/ProximaNovaRegular.eot')
-	src: url('../fonts/ProximaNovaRegular.eot') format('embedded-opentype'), url('../fonts/ProximaNovaRegular.ttf') format('truetype'), url('../fonts/ProximaNovaRegular.woff') format('woff'), url('../fonts/ProximaNovaRegular.svg') format('svg')
-	font-weight: normal
-	font-style: normal
+	font-family 'Proxima Nova'
+	src url('../fonts/ProximaNovaBold.eot')
+	src url('../fonts/ProximaNovaBold.eot') format('embedded-opentype'), url('../fonts/ProximaNovaBold.ttf') format('truetype'), url('../fonts/ProximaNovaBold.woff') format('woff'), url('../fonts/ProximaNovaBold.svg') format('svg')
+	font-weight bold
+	font-style normal
 
 @font-face
-	font-family: 'Proxima Nova'
-	src: url('../fonts/ProximaNovaBold.eot')
-	src: url('../fonts/ProximaNovaBold.eot') format('embedded-opentype'), url('../fonts/ProximaNovaBold.ttf') format('truetype'), url('../fonts/ProximaNovaBold.woff') format('woff'), url('../fonts/ProximaNovaBold.svg') format('svg')
-	font-weight: bold
-	font-style: normal
+	font-family 'greyfox'
+	src url('../fonts/greyfox.eot@uu1b92')
+	src url('../fonts/greyfox.eot@uu1b92') format('embedded-opentype'), url('../fonts/greyfox.ttf@uu1b92') format('truetype'), url('../fonts/greyfox.woff@uu1b92') format('woff'), url('../fonts/greyfox.svg@uu1b92') format('svg')
+	font-weight normal
+	font-style normal
 
-@font-face
-	font-family: 'greyfox'
-	src: url('../fonts/greyfox.eot@uu1b92')
-	src: url('../fonts/greyfox.eot@uu1b92') format('embedded-opentype'), url('../fonts/greyfox.ttf@uu1b92') format('truetype'), url('../fonts/greyfox.woff@uu1b92') format('woff'), url('../fonts/greyfox.svg@uu1b92') format('svg')
-	font-weight: normal
-	font-style: normal
+body
+	font-family 'Proxima Nova'
+	font-weight 400
+	font-size 14px
+	line-height 1.42857143
+	overflow-x hidden
 
-h1,h2,h3,h4,h5,h6
-	line-height: 1.1
+*
+	box-sizing border-box
 
-h1,h2,h3
-	margin-bottom: 10px
+before,
+after
+	box-sizing border-box
+
+a
+	text-decoration none
+	&active,
+	&hover
+		outline 0
+
+p
+	margin 0 0 10px
+
+.container
+	width 1170px
+	margin 0 auto
+	padding 0 15px
+
+h1,h2,h3,h4
+	line-height 1.1
+
+h1,h2,h3,h4
+	margin-top 20px
+	margin-bottom 10px
 
 h2
-	letter-spacing: 2px
-	color: $formblack
+	letter-spacing 2px
+	color $formblack
+	font-size 48px
+	text-transform uppercase
+	font-weight bold
+	text-align center
+	&before
+		display block
+		content ''
+		margin 0 auto
+		height 40px
+		width 4px
+		margin-bottom 36px
+		background-color #ffc501
 
 [class^="icon-"]
-	font-family: 'greyfox'
-	speak: none
-	font-style: normal
-	font-weight: normal
-	font-variant: normal
-	text-transform: none
-	line-height: 1
-	-webkit-font-smoothing: antialiased
-	-moz-osx-font-smoothing: grayscale
+	font-family 'greyfox'
+	speak none
+	font-style normal
+	font-weight normal
+	font-variant normal
+	text-transform none
+	line-height 1
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	position relative
+	top 6px
 
 .icon
-	&-greyfox:before
-		content: "\e902"
+	&-greyfox
+		&before
+			content "\e902"
 	&-rouble
-		vertical-align: middle
-		&:before
-			content: "\62"
+		&before
+			content "\62"
 	&-fb
-		&:before
-			content: "\e900"
-		&:after
-			content: "\e901"
+		&before
+			content "\e900"
+		&after
+			content "\e901"
 	&-instagram
-		&:before
-			content: "\e903"
-		&:after
-			content: "\e905"
+		&before
+			content "\e903"
+		&after
+			content "\e905"
 	&-linkedin
-		&:before
-			content: "\e906"
-		&:after
-			content: "\e909"
+		&before
+			content "\e906"
+		&after
+			content "\e909"
 	&-vk
-		&:before
-			content: "\e90a"
-		&:after
-			content: "\e90b"
+		&before
+			content "\e90a"
+		&after
+			content "\e90b"
 	&-youtube
-		&:before
-			content: "\e90c"
-		&:after
-			content: "\e90d"
+		&before
+			content "\e90c"
+		&after
+			content "\e90d"
+
+.hidden
+	display none!important
+
+.items
+	display flex
+
+
 
 /* Home
 ====================================================================================================*/
 
-header
-	text-align: center
-	position: relative
-	overflow: hidden
+.header
+	position relative
+	text-align center
 
-.bg
+.header-bg
+	position absolute
+	top 0
+	left 0
+	right 0
+	bottom 0
 	z-index -1
-	position: absolute
-	top: 0
-	left: 0
-	right: 0
-	bottom: 0
-	video
-		position: absolute
-		right: 0
-		top: 0
-		bottom: 0
-		z-index: 0
-		width: 1920px
-		left: 50%
-		margin-left: -960px
-		margin-top: -115px
-		background-image: url(../img/bg-header.jpg)
-		background-size: cover
-		background-position: center
-	&:after
-		display: block
-		content: ''
-		position: absolute
-		left: 0
-		right: 0
-		top: 0
-		bottom: 0
-		z-index: 1
-		background-color: rgba(0, 0, 0, 0.86)
-	.lamps
-		position: relative
-		height: 100%
-		width: 1920px
-		left: 50%
-		margin-left: -960px
-		z-index: 2
-		& *
-			position: absolute
-		.lamp1
-			background-image: url(../img/lamps/lamp1.png)
-			width: 109px
-			height: 603px
-			left: 194px
-		.lamp2
-			background-image: url(../img/lamps/lamp2.png)
-			width: 327px
-			height: 866px
-			left: 229px
-		.lamp3
-			background-image: url(../img/lamps/lamp3.png)
-			width: 278px
-			height: 476px
-			left: 355px
-		.lamp4
-			background-image: url(../img/lamps/lamp4.png)
-			width: 93px
-			height: 403px
-			right: 472px
-		.lamp5
-			background-image: url(../img/lamps/lamp5.png)
-			width: 286px
-			height: 798px
-			right: 335px
-		.lamp6
-			background-image: url(../img/lamps/lamp6.png)
-			width: 317px
-			height: 692px
-			right: 138px
-			animation: lampMove 14s ease infinite
+	background-image url(../img/header/bg.jpg)
+	background-size cover
+	background-position center
+	&_video
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		width 100%
+	&after
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		content ''
+		background-color rgba(0, 0, 0, 0.86)
+	&_lamps
+		position relative
+		height 100%
+		width 1920px
+		left 50%
+		margin-left -960px
+		z-index 2
+		&__lamp1
+			position absolute
+			background-image url(../img/lamps/lamp1.png)
+			width 109px
+			height 603px
+			left 194px
+		&__lamp2
+			position absolute
+			background-image url(../img/lamps/lamp2.png)
+			width 327px
+			height 866px
+			left 229px
+		&__lamp3
+			position absolute
+			background-image url(../img/lamps/lamp3.png)
+			width 278px
+			height 476px
+			left 355px
+		&__lamp4
+			position absolute
+			background-image url(../img/lamps/lamp4.png)
+			width 93px
+			height 403px
+			right 472px
+		&__lamp5
+			position absolute
+			background-image url(../img/lamps/lamp5.png)
+			width 286px
+			height 798px
+			right 335px
+		&__lamp6
+			position absolute
+			background-image url(../img/lamps/lamp6.png)
+			width 317px
+			height 692px
+			right 138px
+			animation lampMove 14s ease infinite
+
 
 @keyframes lampMove
 	0%
-		transform: rotate(14deg) translateX(-120px)
+		transform rotate(14deg) translateX(-120px)
 	50%
-		transform: rotate(-14deg) translateX(120px)
+		transform rotate(-14deg) translateX(120px)
 	100%
-		transform: rotate(14deg) translateX(-120px)
+		transform rotate(14deg) translateX(-120px)
 
 .topbar
-	padding: 34px 0
-	background-color: rgba(0, 0, 0, 0.5)
-	text-align: left
-	height: 57.45px // чтоб соответствовало макету, не понимаю почему там выше правая группа
+	padding 34px 0
+	background-color rgba(0, 0, 0, 0.5)
+	text-align left
 	.container
 		display flex
 		justify-content space-between
 
 .brand
 	&_logo
-		display: block
+		display block
 		background-image url(../img/logo.png)
-		width: 204px
-		height: 25px
-		margin-top: 7px
-		background-size: contain
-		background-repeat: no-repeat
+		width 204px
+		height 25px
+		margin-top 7px
+		background-size contain
+		background-repeat no-repeat
 	&_slogan
-		font-size: 15.4px
+		font-size 15.4px
 		color white
 
 .tel
-	color: white
+	color white
 	text-align right
 	& *
-		vertical-align: middle
-		display: inline-block
+		vertical-align middle
+		display inline-block
 	&_number
 		color white
-		font-size: 24px
+		font-size 24px
 		font-weight bold
 	&_call
-		position: relative
-		display: inline-block
-		font-size: 16px
-		color: $yellow
-		margin-left: 6px
-		overflow: hidden
-		transition: all 0.225s ease
-		&:after
-			display: block
-			content: ''
-			width: 100%
-			height: 1px
-			background-color: $yellow
-			transition: all 0.225s ease
-		&:focus,
-		&:hover
-			&:after
-				width: 0
+		position relative
+		display inline-block
+		font-size 16px
+		color $yellow
+		margin-left 6px
+		overflow hidden
+		transition all 0.225s ease
+		&after
+			display block
+			content ''
+			width 100%
+			height 1px
+			background-color $yellow
+			transition all 0.225s ease
+		&focus,
+		&hover
+			&after
+				width 0
 	&_icon
-		display: block
-		font-size: 24px
-		font-weight: bold
-		color: white
-		line-height: 1.1em
+		display block
+		font-size 24px
+		font-weight bold
+		color white
+		line-height 1.1em
 		i
-			margin-right: 6px
-			transition: all 0.225s ease
-		&:hover i
-			transform: rotate(-30deg)
+			margin-right 6px
+			transition all 0.225s ease
+		&hover i
+			transform rotate(-30deg)
 
 // justify-content не применяю потому что потом запутаюсь пытаясь сделать пиксель перфект по макету
 // применить отрицательный марджин по краям?
@@ -258,170 +289,170 @@ header
 	&_ul
 		list-style none
 		display flex
-		margin: 0
+		margin 0
 		padding 0
 		li
-			&:first-child > a
+			&first-child > a
 				padding-left 0
-			&:last-child > a
+			&last-child > a
 				padding-right 0
-			&:last-child > a:after
-				display: none
+			&last-child > aafter
+				display none
 		a
-			display: block
+			display block
 			text-transform uppercase
-			font-size: 14px
-			padding: 23px 24px
+			font-size 14px
+			padding 23px 24px
 			text-decoration none
 			color black
-			transition: all 0.225s ease
+			transition all 0.225s ease
 			position relative
-			&:after
-				display: block
-				position: absolute
-				z-index: 1
-				content: ''
-				background-color: white
-				width: 1px
-				height: 16px
-				right: -1px
-				top: 50%
-				margin-top: -8px
-				transition: all 0.225s ease
-			&:hover:after
-				height: 6px
-				width: 6px
-				margin-top: -3px
-				margin-right: -2px
-				background-color: black
+			&after
+				display block
+				position absolute
+				z-index 1
+				content ''
+				background-color white
+				width 1px
+				height 16px
+				right -1px
+				top 50%
+				margin-top -8px
+				transition all 0.225s ease
+			&hoverafter
+				height 6px
+				width 6px
+				margin-top -3px
+				margin-right -2px
+				background-color black
 
 .home
 	text-align center
 	.container
 		padding-top 170px
 	&_h1
-		font-size: 50px
-		font-weight: bold
-		color: $yellow
-		text-transform: uppercase
-		margin: 0 0 64px 0
-		line-height: 1.1
+		font-size 50px
+		font-weight bold
+		color $yellow
+		text-transform uppercase
+		margin 0 0 64px 0
+		line-height 1.1
 	&_economy
-		display: block
-		font-size: 45px
-		color: white;
-		text-transform: none
+		display block
+		font-size 45px
+		color white;
+		text-transform none
 	&_forget
-		font-size: 36px
-		color: white
-		margin: 0
-		&:before
-			display: block
-			content: ''
-			position: absolute
-			width: 66px
-			height: 3px
-			background-color: $yellow
-			left: 50%
-			margin-left: -33px
-			margin-top: -27px
+		font-size 36px
+		color white
+		margin 0
+		&before
+			display block
+			content ''
+			position absolute
+			width 66px
+			height 3px
+			background-color $yellow
+			left 50%
+			margin-left -33px
+			margin-top -27px
 
 .btn
-	position: relative
-	font-size: 16px
-	color: white
-	font-weight: bold
-	text-transform: uppercase
-	background: none
-	border: 0
-	box-shadow: none
-	border-radius: 0
-	padding: 0
-	display: inline-block
-	text-align: center
-	white-space: nowrap
-	vertical-align: middle
-	touch-action: manipulation
-	cursor: pointer
-	box-sizing: border-box
-	line-height: 1.42857143
-	user-select: none
-	-moz-user-select: none
+	position relative
+	font-size 16px
+	color white
+	font-weight bold
+	text-transform uppercase
+	background none
+	border 0
+	box-shadow none
+	border-radius 0
+	padding 0
+	display inline-block
+	text-align center
+	white-space nowrap
+	vertical-align middle
+	touch-action manipulation
+	cursor pointer
+	box-sizing border-box
+	line-height 1.42857143
+	user-select none
+	-moz-user-select none
 	&_span
-		position: relative
-		z-index: 2
-		display: inherit
-		background-color: #ffc501
-		padding: 18px 28px
-		letter-spacing: 2px
-		transition: all 0.225s ease
-	&:before
-		display: block
-		position: absolute
-		content: ''
-		width: 100%
-		height: 100%
-		border: 1px solid #ffc501
-		transition: all 0.225s ease
-		transform: rotate(-2deg)
-		box-sizing: border-box
-	&:hover:before,
-	&:focus:before
-		transform: rotate(-4deg)
-	&:hover &_span,
-	&:focus &_span
-		background-color: black
-		color: $yellow
-	&:active:before
-		background-color: $yellow
+		position relative
+		z-index 2
+		display inherit
+		background-color #ffc501
+		padding 18px 28px
+		letter-spacing 2px
+		transition all 0.225s ease
+	&before
+		display block
+		position absolute
+		content ''
+		width 100%
+		height 100%
+		border 1px solid #ffc501
+		transition all 0.225s ease
+		transform rotate(-2deg)
+		box-sizing border-box
+	&hoverbefore,
+	&focusbefore
+		transform rotate(-4deg)
+	&hover &_span,
+	&focus &_span
+		background-color black
+		color $yellow
+	&activebefore
+		background-color $yellow
 
 header .btn
-	margin-top: 56px
-	margin-bottom: 104px
+	margin-top 56px
+	margin-bottom 104px
 
 .advantages
-	background-color: rgba(0, 0, 0, 0.5)
+	background-color rgba(0, 0, 0, 0.5)
 	height 182.267px
 	.advantages-slider
 		box-sizing content-box
 	.slick-arrow
-		width: 30px
-		border: 1px solid white
-		height: 35px
-		background-size: 13px 23px
-		transition: all 0.225s ease
-		background-position: center
-		background-repeat: no-repeat
+		width 30px
+		border 1px solid white
+		height 35px
+		background-size 13px 23px
+		transition all 0.225s ease
+		background-position center
+		background-repeat no-repeat
 		position absolute
 		z-index 10
-		margin-top: -7px
-		&:hover
+		margin-top -7px
+		&hover
 			border-color $yellow
-		&:before
+		&before
 			display none
 	.slick-prev
-		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")
-		left: 25px
-		right: auto
+		background-image url("dataimage/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")
+		left 25px
+		right auto
 	.slick-next
-		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")
-		right: 25px
-		left: auto
+		background-image url("dataimage/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")
+		right 25px
+		left auto
 
 .advantage
-	color: white
-	padding: 23px 30px
+	color white
+	padding 23px 30px
 	outline 0
 	cursor default
-	text-align: left
+	text-align left
 	&_icon
-		width: 100px
-		height: 140px
-		float: left
-		background-position: center 40%
-		background-repeat: no-repeat
-		filter: grayscale(100%) brightness(130%)
-		transition: all 0.225s ease
+		width 100px
+		height 140px
+		float left
+		background-position center 40%
+		background-repeat no-repeat
+		filter grayscale(100%) brightness(130%)
+		transition all 0.225s ease
 	.icon-1
 		background-image url("../img/icons/1.png")
 	.icon-2
@@ -439,208 +470,1387 @@ header .btn
 	.icon-8
 		background-image url("../img/icons/8.png")
 	&_name
-		font-size: 20px
-		font-weight: bold
-		text-transform: uppercase
-		transition: all 0.225s ease
-		margin-top: 20px
-		margin-bottom: 10px
-		line-height: 1.1
-	&:hover
+		font-size 20px
+		font-weight bold
+		text-transform uppercase
+		transition all 0.225s ease
+		margin-top 20px
+		margin-bottom 10px
+		line-height 1.1
+	&hover
 		.advantage_icon
-			filter: grayscale(0%) brightness(100%)
+			filter grayscale(0%) brightness(100%)
 		.advantage_name
 			color $yellow
 	&_desc
-		font-size: 13px
-		padding: 0 15px
-		margin: 0 0 10px 0
+		font-size 13px
+		padding 0 15px
+		margin 0 0 10px 0
 
 /* Offer1
 ====================================================================================================*/
 
-.offer1
-	padding: 28px 0 100px
-	background-color: white
+.offer
+	padding 28px 0 100px
+	background-color white
+	height 453.2px
 	.bs
-		margin: 0 -15px
+		margin 0 -15px
 		display flex
 		flex-shrink 0
 	&_description
-		width: 50%
+		width 50%
 		align-self flex-start
-		box-sizing: border-box
+		box-sizing border-box
 		flex-shrink 0
 		padding 0 15px
 		.box
-			padding: 65px 90px
-			margin-top: 50px
-			border: 4px solid $yellow
+			padding 65px 90px
+			margin-top 50px
+			border 4px solid $yellow
 		h2
-			font-size: 28px
-			font-weight: bold
-			margin-top: 0
-			position: relative
-			text-align: left
-			&:before
-				height: 1px
-				width: 50px
-				background-color: $grey
-				position: absolute
-				left: -65px
-				top: 6px
-				display: block;
-				content: '';
-				margin: 0 auto 36px auto
+			font-size 28px
+			font-weight bold
+			margin-top 0
+			position relative
+			text-align left
+			&before
+				height 1px
+				width 50px
+				background-color $grey
+				position absolute
+				left -65px
+				top 6px
+				display block;
+				content '';
+				margin 0 auto 36px auto
 		p
-			font-size: 15px
-			color: $lblack
-			position: relative
-			padding-left: 70px
-			margin: 33px 0 0 0
-			&:before
-				display: block
-				content: ''
-				background-color: $yellow
-				position: absolute
-				width: 44px
-				height: 4px
-				left: 0
-				top: 7px
+			font-size 15px
+			color $lblack
+			position relative
+			padding-left 70px
+			margin 33px 0 0 0
+			&before
+				display block
+				content ''
+				background-color $yellow
+				position absolute
+				width 44px
+				height 4px
+				left 0
+				top 7px
 	&_lamp
-		position: absolute
-		width: 224px
-		height: 409px
-		background-size: contain
-		background-position: center
-		background-repeat: no-repeat
-		background-image: url(../img/offer-lamp.png)
-		margin-left: -102px
-		margin-top: 15px
-		transition: all 0.225s ease
-		&:hover
-			transform: rotate(-8deg) translateX(-50px)
-	&_form1
-		width: 50%
-		padding: 0 15px
-		box-sizing: border-box
+		position absolute
+		width 224px
+		height 409px
+		background-size contain
+		background-position center
+		background-repeat no-repeat
+		background-image url(../img/offer-lamp.png)
+		margin-left -102px
+		margin-top 15px
+		transition all 0.225s ease
+		&hover
+			transform rotate(-8deg) translateX(-50px)
+	&_form
+		width 50%
+		padding 0 15px
+		box-sizing border-box
 		flex-shrink 0
 
-.form1
-	position: relative
-	z-index: 2
-	background-color: $formblack
-	padding: 38px 74px
+.form
+	position relative
+	z-index 2
+	background-color $formblack
+	padding 38px 74px
 	text-align center
 	&_input
-		position: relative
-		margin: 17px 0
-		box-sizing: border-box
+		position relative
+		margin 17px 0
+		box-sizing border-box
 		input,
 		select
-			height: 50px
-			padding: 6px 15px
-			font-size: 16px
-			color: #efefef
-			border: 1px solid white
-			background-color: $formlblack
-			box-shadow: none
-			border-radius: 0
-			transition: all 0.225s ease
-			display: block
-			width: 100%
-			line-height: 1.42857143
-			background-image: none
-			box-sizing: border-box
+			height 50px
+			padding 6px 15px
+			font-size 16px
+			color #efefef
+			border 1px solid white
+			background-color $formlblack
+			box-shadow none
+			border-radius 0
+			transition all 0.225s ease
+			display block
+			width 100%
+			line-height 1.42857143
+			background-image none
+			box-sizing border-box
 			cursor pointer
-			&::placeholder
-				color: $white
-				opacity: 1
-			&:focus,
-			&:active
-				border-color: $yellow
+			&placeholder
+				color $white
+				opacity 1
+			&focus,
+			&active
+				border-color $yellow
 				+i
-					color: $yellow
+					color $yellow
 		select
-			padding: 6px 13px
+			padding 6px 13px
 		i
-			position: absolute
-			right: 15px
-			top: 50%
-			margin-top: -12px
-			color: white
-			pointer-events: none
-			transition: all 0.225s ease
+			position absolute
+			right 15px
+			top 50%
+			margin-top -12px
+			color white
+			pointer-events none
+			transition all 0.225s ease
 		&__arrow
-			height: 50px
-			right: 20px
-			position: absolute
-			top: -2px
-			color: #efefef
+			height 50px
+			right 20px
+			position absolute
+			top -2px
+			color #efefef
 			b
-				border-color: #888 transparent transparent transparent
-				border-style: solid
-				border-width: 5px 4px 0 4px
-				height: 0
-				position: absolute
-				top: 50%
-				width: 0
+				border-color #888 transparent transparent transparent
+				border-style solid
+				border-width 5px 4px 0 4px
+				height 0
+				position absolute
+				top 50%
+				width 0
 	&_text
-		color: white
-		font-size: 16px
-		margin: 20px 0 30px
+		color white
+		font-size 16px
+		margin 20px 0 30px
 		text-align left
 	&_select-wrap
-		width: 50%
-		height: 50px
+		width 50%
 		margin 0 15px
 		position relative
 		cursor pointer
 		select
-			-moz-appearance: none
-			-webkit-appearance: none
-			margin: 0
-			color: rgba(0,0,0,0)
-			text-shadow: 0 0 0 #fff
+			-moz-appearance none
+			-webkit-appearance none
+			margin 0
+			color rgba(0,0,0,0)
+			text-shadow 0 0 0 #fff
 	label
-		margin: 20px 0
+		margin 20px 0
 		display block
 		text-align center
-		color: white
-		font-weight: 400
+		color white
+		font-weight 400
 		position relative
 		input
-			margin-right: 8px
-			position: relative
-			top: 2px
+			margin-right 8px
+			position relative
+			top 2px
 		.underline
-			cursor: help
-			text-decoration: underline
-			&:hover+.info
-				opacity: 1
-				pointer-events: auto
-				color: #333333
-				text-align: left
+			cursor help
+			text-decoration underline
+			&hover+.info
+				opacity 1
+				pointer-events auto
+				color #333333
+				text-align left
 		.info
-			position: absolute
-			font-size: 12px
-			line-height: 1.2
-			left: 0
-			right: 0
-			bottom: 35px
-			background: #fff
-			z-index: 99
-			padding: 10px
-			border-radius: 6px
-			opacity: 0
-			pointer-events: none
+			position absolute
+			font-size 12px
+			line-height 1.2
+			left 0
+			right 0
+			bottom 35px
+			background #fff
+			z-index 99
+			padding 10px
+			border-radius 6px
+			opacity 0
+			pointer-events none
 			text-align left
-			transition: all 0.225s ease
-			&:before
-				display: block
-				content: ''
-				position: absolute
-				border: 6px solid transparent
-				border-top-color: white
-				bottom: -12px
-				right: 50px
+			transition all 0.225s ease
+			&before
+				display block
+				content ''
+				position absolute
+				border 6px solid transparent
+				border-top-color white
+				bottom -12px
+				right 50px
+
+
+/* Hits
+====================================================================================================*/
+
+.hits
+	position relative
+	padding 85px 0 100px
+	background-image url(../img/bg-hits.jpg)
+	background-size cover
+	background-position top center
+	background-repeat no-repeat
+	text-align center
+	height 824.6px
+	.lamp
+		width 537px
+		height 692px
+		background-image url(../img/lamp.png)
+		position absolute
+		right -144px
+		bottom 62px
+	.filter
+		font-size 18px
+		margin 70px 20px 20px
+		text-align left
+		&_select-wrap
+			position relative
+			cursor pointer
+			display inline-block
+			select
+				-moz-appearance none
+				-webkit-appearance none
+				margin 0
+				color rgba(0,0,0,0)
+				text-shadow 0 0 0 #444
+				height 28px
+				padding 0 24px 0 4px
+				font-size 16px
+				border 1px solid #f79816
+				box-shadow none
+				border-radius 0
+				transition all 0.225s ease
+				display inline-block
+				line-height 1.42857143
+				background-image none
+				box-sizing border-box
+				cursor pointer
+				background-color #f3f3f3
+		&__arrow
+			height 28px
+			right 20px
+			position absolute
+			top -2px
+			color #efefef
+			b
+				border-color #888 transparent transparent transparent
+				border-style solid
+				border-width 5px 4px 0 4px
+				height 0
+				position absolute
+				top 50%
+				width 0
+	.incandescent,
+	.halogen
+		display flex
+		padding 0 10px
+		.item
+			position relative
+			width 205px
+			text-align center
+			background-color white
+			margin 20px 10px
+			&before
+				display block
+				content ''
+				position absolute
+				z-index 1
+				left 5px
+				top 5px
+				right 5px
+				bottom 5px
+				border 2px solid #fdf5e0
+				opacity 0
+				transition all 0.225s ease
+			&hoverbefore
+				opacity 1
+			&hover
+				.image
+					img
+						transform translateY(-10px)
+			h3
+				font-size 16px
+				text-transform uppercase
+				font-weight bold
+				text-overflow ellipsis
+				overflow hidden
+				white-space nowrap
+			.price
+				font-size 16px
+				position relative
+				text-overflow ellipsis
+				overflow hidden
+				white-space nowrap
+				&before,
+				&after
+					display inline-block
+					vertical-align middle
+					content ''
+					width 30px
+					height 1px
+					background-color #171717
+					margin 0 10px
+		.image
+			display block
+			width 100%
+			height 165px
+			margin 45px 0 24px
+			position relative
+			img
+				display block
+				position absolute
+				left 60.4916px
+				bottom 0
+				transition all 0.225s ease
+				height 100%
+		.btn
+			background-color black
+			margin 18px 0 43px
+			&_span
+				letter-spacing 1px
+				padding-top 9px
+				padding-bottom 9px
+				background-color black
+			&before
+				border-color black
+			&hover,
+			&focus
+				.btn_span
+					background-color #ffc501
+					color white
+			&activebefore
+				background-color black;
+	.btn-more
+		margin-top 55px
+		font-size 16px
+		.btn_span
+			padding 10px 50px
+			line-height 1.2em
+			letter-spacing 1px
+
+/* calculator
+====================================================================================================*/
+
+#calculator
+	background-image url(../img/bg-calculator.jpg)
+	background-size cover
+	background-position top center
+	text-align center
+	padding 85px 0 100px
+	h2
+		color white
+	.bs
+		display flex
+		justify-content space-between
+		.item
+			padding 90px 0 10px
+	h3
+		color white
+		position relative
+		font-size 32px
+		text-transform uppercase
+		font-weight bold
+		&before
+			display block
+			content ''
+			position absolute
+			width 60px
+			height 100px
+			left 50%
+			margin-left -30px
+			top 50%
+			margin-top -50px
+			border 4px solid #ffc501
+			transition all 0.225s ease
+		&hover
+			&before
+				transform rotate(45deg)
+				width 100px
+				margin-left -50px
+	.lamp
+		width 385px
+		height 370px
+		border 4px solid #808080
+		margin 92px auto 21px
+		position relative
+		background-repeat no-repeat
+		background-position center
+		transition all 0.225s ease
+		background-color black
+		&after
+			display block
+			content ''
+			position absolute
+			left 0
+			right 0
+			top 0
+			bottom 0
+			background-repeat no-repeat
+			background-position center
+			transition all 0.225s ease
+		&after
+			opacity 0
+		&hover
+			background
+			&after
+				opacity 1
+	.simple
+		background-image url(../img/calculator/lamp1.png)
+		&after
+			background-image url(../img/calculator/lamp1-on.png)
+			background-position 95px 37px
+	.osram
+		background-image url(../img/calculator/lamp2.png)
+		&after
+			background-image url(../img/calculator/lamp2-on.png)
+			background-position 28px -29px
+	.cost
+		margin 23px 0 12px
+		font-size 24px
+		color white
+	.text
+		font-size 20px
+		color #ffc501
+		position relative
+		&after
+			display block
+			position absolute
+			content ''
+			width 50px
+			height 2px
+			left 50%
+			margin-left -25px
+			bottom -5px
+			background-color #ffc501
+	.cost-visual
+		margin 0 auto
+		width 50%
+		position relative
+		height 1px
+		background-color #383838
+		&before,
+		&after
+			display block
+			content ''
+			position absolute
+			height 10px
+			width 10px
+			top 50%
+			margin-top -5px
+			background-color #9b9a98
+		&before
+			left 0
+		&after
+			right 0
+	.btn-start
+		margin 53px 0 61px
+		.btn_span
+			font-size 24px
+			min-width 260px
+			padding-top 13px
+			padding-bottom 13px
+	.switcher
+		margin 66px 0
+		& > span
+			font-size 20px
+			display inline-block
+			vertical-align middle
+			line-height 1em
+			margin 0 10px
+	.timeline
+		& > div
+			float left
+			width 20%
+			height 3px
+			cursor pointer
+			background-color #ffc501
+			position relative
+			transition all 0.225s ease
+			&before
+				display block
+				content ''
+				width 10px
+				height 10px
+				background-color #ffc501
+				position absolute
+				right 0
+				top 50%
+				margin-top -5px
+				transition all 0.225s ease
+			&after
+				display block
+				font-size 18px
+				font-weight bold
+				color #3c3c3c
+				position absolute
+				right -1px
+				bottom -35px
+				transition all 0.225s ease
+			&:nth-child(1)after
+				content '0'
+			&:nth-child(2)after
+				content '1'
+			&:nth-child(3)after
+				content '2'
+			&:nth-child(4)after
+				content '3'
+			&:nth-child(5)after
+				content '4'
+			&:nth-child(6)after
+				content '5'
+			&first-child
+				width 0
+			&.active
+				background-color white
+				&before
+					background-color white
+				&after
+					color white
+	.total
+		margin 94px 0 12px
+		.text
+			font-size 24px
+			color white
+			text-transform uppercase
+			font-weight bold
+			& > span
+				display block
+		.value
+			font-size 32px
+			font-weight bold
+			color #ffc501
+			text-transform uppercase
+	.open-detail
+		font-size 18px
+		text-decoration none
+		color white
+		font-weight bold
+		transition all 0.225s ease
+		span
+			border-bottom 1px solid white
+			padding-bottom 2px
+			transition all 0.225s ease
+		&active
+			span
+				color #ffc501
+		&before
+			content '»'
+		&after
+			content '«'
+	.switch
+		transition .225s
+	.cost
+		.value
+			min-width 90px
+			display inline-block
+			text-align left
+
+#calculator .open-detailhover span,
+#calculator .open-detailfocus span
+	border-color #ffc501
+
+#calculator .open-detailbefore,
+#calculator .open-detailafter
+	display inline-block
+	vertical-align middle
+	color #ffc501
+	margin 0 10px
+	font-weight normal
+
+.switch
+	position relative
+	display inline-block
+	vertical-align middle
+	width 60px
+	height 34px
+	input
+		display none
+
+.slider
+	position absolute
+	cursor pointer
+	top 0
+	left 0
+	right 0
+	bottom 0
+	border 2px solid #ffc501
+	transition .4s
+	&before
+		position absolute
+		content ''
+		height 26px
+		width 26px
+		left 2px
+		bottom 2px
+		background-color #ffc501
+		transition .225s
+	&.round
+		border-radius 34px
+		&before
+			border-radius 50%
+
+input
+	&focus
+		& + .slider
+			box-shadow 0 0 1px #2196F3
+	&checked
+		& + .slider
+			&before
+				transform translateX(26px)
+
+.disabled
+	pointer-events none
+	cursor default
+	opacity 0.5
+
+.timeline
+	&.disabled
+		opacity 1
+
+#calculator .total,
+#calculator .open-detail
+	opacity 0
+	transform scale(0.4)
+	transition .225s
+
+#calculator .total.active,
+#calculator .open-detail.active
+	transform scale(1)
+	opacity 1
+
+
+/* why
+====================================================================================================*/
+
+#why
+	padding 80px 0 20px
+	h2
+		margin-bottom 100px
+	.items
+		display flex
+		flex-wrap wrap
+		.item
+			height 170px
+			width 33%
+			.wrap
+				position relative
+			.number
+				font-size 18px
+				font-weight bold
+				border-radius 50%
+				background-color #ffc501
+				font-style normal
+				width 40px
+				height 40px
+				line-height 40px
+				text-align center
+				display block
+				position absolute
+				left 30px
+				top 0
+				-webkit-animation pulse 2s infinite
+				animation pulse 2s infinite
+			h3
+				padding-left 100px
+				font-size 16px
+				text-transform uppercase
+				font-weight bold
+				position relative
+				margin 0 0 15px
+				&after
+					display block
+					content ''
+					width 40px
+					height 1px
+					background-color #e0dfda
+					margin-top 8px
+			p
+				font-size 16px
+				color #b3b3b3
+				padding-left 100px
+			&:nth-child(3n+2)
+				padding-top 60px
+			&:nth-child(3n+3)
+				padding-top 120px
+
+
+
+/* offer2
+====================================================================================================*/
+
+#offer2
+	.btn_span
+		padding-top 10px
+		padding-bottom 10px
+	.offer_lamp
+		background-image url(../img/offer-lamp2.png)
+		margin-left -120px
+		margin-top 35px
+	form_input__arrow
+		b
+			top 96px
+			right -5px
+
+
+/* steps
+====================================================================================================*/
+
+#steps
+	background-image url(../img/bg-steps.jpg)
+	background-size cover
+	background-position top center
+	padding 88px 0 108px
+	color white
+	h2
+		margin-bottom 80px
+		color white
+	.items
+		display flex
+		flex-wrap wrap
+		justify-content center
+		.items
+			width 50%
+			&last-child
+				.itemlast-childafter
+					display none
+		.item
+			width 45%
+			flex-basis 262.5px
+			text-align center
+			position relative
+			margin 0 10px
+			i
+				position relative
+				width 80px
+				height 80px
+				margin 0 auto
+				border-radius 50%
+				display block
+				background-repeat no-repeat
+				background-position center
+				background-color #ffc501
+				&before
+					display block
+					content ''
+					width 110px
+					height 110px
+					border 1px solid #ffc501
+					position absolute
+					left 50%
+					top 50%
+					margin-left -70%
+					margin-top -70%
+					border-radius 50%
+					transition all 0.225s ease
+			.step_1
+				background-image url("../img/steps/1.png")
+			.step_2
+				background-image url("../img/steps/2.png")
+			.step_3
+				background-image url("../img/steps/3.png")
+			.step_4
+				background-image url("../img/steps/4.png")
+			&after
+				display block
+				content ''
+				position absolute
+				right -30px
+				top 0
+				margin-top 31px
+				width 32px
+				height 21px
+				background-image url(../img/steps/arrow-right.png)
+				transition all 0.225s ease
+			&hover
+				ibefore
+					transform scale(1.06)
+				&after
+					transform translateX(-10px)
+			h3
+				font-size 18px
+				color #ffc501
+				text-transform uppercase
+				font-weight bold
+				margin 37px 0 20px
+			p
+				font-size 16px
+
+/* delivery
+====================================================================================================*/
+
+#delivery
+	background-image url(../img/delivery/bg-hits.jpg)
+	background-size cover
+	background-position top center
+	padding 81px 0 88px
+	.container
+		>.items
+			justify-content space-between
+			margin 0 -15px
+			.item
+				width 45%
+				flex-basis 457.5px
+				padding 0 15px
+				.items
+					flex-direction column
+	h3
+		font-size 32px
+		text-transform uppercase
+		font-weight bold
+		position relative
+		text-align center
+		margin 87px 0 99px
+		span
+			position relative
+			z-index 1
+		&before
+			display block
+			content ''
+			position absolute
+			width 60px
+			height 100px
+			left 50%
+			margin-left -30px
+			top 50%
+			margin-top -50px
+			border 4px solid #ffc501
+			transition all 0.225s ease
+			box-sizing border-box
+	.delivery-item
+		cursor pointer
+		background-color white
+		position relative
+		margin-bottom 25px
+		box-shadow 1px 1.732px 10px 0 rgba(0, 0, 0, 0.08)
+		width 457.5px
+		height 225px
+		&last-child
+			margin-bottom 0
+		h4
+			position relative
+			z-index 2
+			text-align center
+			font-weight bold
+			text-transform uppercase
+			font-size 18px
+			margin-top 25px
+			transition all 0.225s ease
+		&_icon
+			position relative
+			z-index 2
+			display block
+			margin 41px auto 0
+			border-radius 50%
+			background-color #f3f3f3
+			width 86px
+			height 86px
+			background-repeat no-repeat
+			background-position center
+			transition all 0.225s ease
+			&__1
+				background-image url("../img/delivery/icon1.png")
+			&__2
+				background-image url("../img/delivery/icon2.png")
+			&__3
+				background-image url("../img/delivery/icon3.png")
+			&__4
+				background-image url("../img/delivery/icon4.png")
+			&__5
+				background-image url("../img/delivery/icon5.png")
+			&__6
+				background-image url("../img/delivery/icon6.png")
+		&_info
+			position absolute
+			right 0
+			bottom 0
+			top 0
+			left 0
+			opacity 0
+			z-index 3
+			transition all 0.225s ease;
+			&before,
+			&after
+				display block
+				content ''
+				background-color #ffc501
+				position absolute
+			&before
+				bottom -12px
+				left 12px
+				right -12px
+				height 12px
+			&after
+				bottom -12px
+				top 12px
+				right -12px
+				width 12px
+		&before,
+		&after
+			display block
+			content ''
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			opacity 0
+			transition all 0.225s ease
+		&before
+			background-image url(../img/delivery/bg.jpg)
+			background-position top center
+			background-size cover
+		&after
+			background-color rgba(0, 0, 0, 0.5)
+		&hover
+			&before,
+			&after,
+			.delivery-item_info
+				opacity 1
+			.delivery-item_icon
+				background-color white
+			h4
+				color white
+		&_eye
+			display block
+			border 40px solid transparent
+			border-right-color #ffc501
+			border-bottom-color #ffc501
+			width 0
+			z-index 2
+			cursor default
+			position absolute
+			right -12px
+			bottom -12px
+			&before
+				display block
+				position absolute
+				content ''
+				width 36px
+				height 22px
+				background-image url(../img/delivery/eye.png)
+			&hover
+				+.delivery-item_desc
+					opacity 1
+		&_desc
+			position absolute
+			opacity 0
+			left 0
+			right 0
+			top 0
+			bottom 0
+			border 4px solid #ffc501
+			background-image url(../img/delivery/bg.jpg)
+			background-size cover
+			background-position top center
+			transition all 0.225s ease
+			&before
+				position absolute
+				content ''
+				display block
+				left 0
+				right 0
+				top 0
+				bottom 0
+				background-color rgba(0, 0, 0, 0.8)
+		&_text
+			position relative
+			z-index 2
+			color white
+			padding 20px 25px
+			font-size 12px
+		&__active
+			.delivery-item_desc
+				opacity 1
+
+/* about
+====================================================================================================*/
+
+.about
+	position relative
+	padding 83px 0 106px
+	text-align center
+	.bg
+		width 1920px
+		position absolute
+		left 50%
+		margin-left -960px
+		.lamp1
+			position absolute
+			background-image url(../img/about/lamp1.png)
+			width 273px
+			height 280px
+			top -90px
+			right 204px
+		.lamp2
+			position absolute
+			background-image url(../img/about/lamp2.png)
+			width 271px
+			height 331px
+			top 377px
+		.lamp3
+			position absolute
+			background-image url(../img/about/lamp3.png)
+			width 254px
+			height 287px
+			right 30px
+			top 325px
+		.lamp4
+			position absolute
+			background-image url(../img/about/lamp4.png)
+			width 369px
+			height 340px
+			top 759px
+			left 45px
+		.lamp5
+			position absolute
+			background-image url(../img/about/lamp5.png)
+			width 316px
+			height 397px
+			right 16px
+			top 614px
+	h2
+		margin-bottom 66px
+	.items
+		margin 0 -15px
+	.item
+		padding 0 15px
+	&-item1
+		width 41.66666667%
+	&-item2
+		width 58.33333333%
+	&_img
+		height 510px
+		border 10px solid #f4f4f4
+		transition all 0.225s ease
+		background-image url("../img/about/img.jpg")
+		background-size cover
+		background-position center
+		&hover
+			border-color #ffc501
+	&_text
+		font-size 17px
+		text-align left
+	&_text-bottom
+		font-size 24px
+		font-weight bold
+		text-transform uppercase
+		text-align center
+		margin 35px 0 48px
+
+/* numbers
+====================================================================================================*/
+
+.numbers
+	padding 92px 0 102px
+	background-image url(../img/numbers/bg.jpg)
+	background-size cover
+	background-position top center
+	color white
+	.items
+		margin 0 -15px
+	.item
+		padding 0 15px
+		width 25%
+	&-item
+		text-align center
+		&_icon
+			display block
+			width 65px
+			height 65px
+			margin 0 auto
+			background-position center
+			background-repeat no-repeat
+			&__1
+				background-image url("../img/numbers/icon1.png")
+			&__2
+				background-image url("../img/numbers/icon2.png")
+			&__3
+				background-image url("../img/numbers/icon3.png")
+			&__4
+				background-image url("../img/numbers/icon4.png")
+		&_pretitle
+			font-size 16px
+			text-transform uppercase
+			margin 7px 0 9px
+		&_number
+			text-transform uppercase
+			font-weight bold
+			font-size 49px
+			line-height 1em
+		&_subtitle
+			font-size 22px
+			font-weight bold
+			text-transform uppercase
+			line-height 1em
+
+/* certificates
+====================================================================================================*/
+
+.certificates
+	padding 83px 0 100px
+	h2
+		margin-bottom 60px
+	&-item
+		&_img
+			display block
+			position relative
+			overflow hidden
+			background-size cover
+			background-position center
+			height 400px
+			width 270px
+			margin 0 auto
+			border 10px solid #f4f4f4
+			transition all 0.225s ease
+			&__1
+				background-image url("../img/certificates/1.jpg")
+			&__2
+				background-image url("../img/certificates/2.jpg")
+			&__3
+				background-image url("../img/certificates/3.jpg")
+			&__4
+				background-image url("../img/certificates/4.jpg")
+			&__5
+				background-image url("../img/certificates/5.jpg")
+			&__6
+				background-image url("../img/certificates/6.jpg")
+			&__7
+				background-image url("../img/certificates/7.jpg")
+			&__8
+				background-image url("../img/certificates/8.jpg")
+			&__9
+				background-image url("../img/certificates/9.jpg")
+			&__10
+				background-image url("../img/certificates/10.jpg")
+			&__11
+				background-image url("../img/certificates/11.jpg")
+			&__12
+				background-image url("../img/certificates/12.jpg")
+			&__13
+				background-image url("../img/certificates/13.jpg")
+			&before,
+			&after
+				display block
+				content ''
+				position absolute
+				opacity 0
+				transition all 0.225s ease
+			&before
+				left 0
+				right 0
+				top 0
+				bottom 0
+				background-color rgba(0, 0, 0, 0.8)
+			&after
+				width 32px
+				height 32px
+				left 50%
+				margin-left -16px
+				top 50%
+				margin-top -16px
+				background-image url('dataimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABGlBMVEUAAAD/xAD/xgD/xQH/xQH/xQH/xQH/xQH/xQH/xQL/xAD/vwD/yAD/xQH/xQH/xQH/xQL/xQD/zAD/xgH/xAH/xAL/xAH/xQH/xQH/xQD/yAD/xQH/xQH/xAD/xwD//wD/vwD/xgD/xQD/xQH/xQL/tgD/xQH/xQH/xQD/xgL/xQH/xAH/vwD/xgH/xgD/xAD/xQH/xgL/wgD/xAD/xQH/xgD/xQH/xQD/xgL/xgD/xQH/xQL/xAD/xQD/xgD/xQD/xQL/xQH/xQH/xgD/xgD/xQH/xQL/xgD/xQH/xQH/xQH/xQL/yQD/xgD/xAL/xQD/xgD/wwD/zAD/xgD/xAL/xQH/xQD/xgH/wwD/xAD/xAD/xgD/xQEAAAAeIY0mAAAAXHRSTlMAGmev0On548meUgwutP74khYK9MSl0fvzchzNs1spAgg2adiiB+TvXY79uwS2Gz3ckxVX4Fq5c5wS8Kgnbm85jfrULQn8pHTlseGME0eHfF4vBVCCxVj9M5RWWah46wIAAAABYktHRACIBR1IAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4QYaEB0j4AWewgAAAadJREFUOMuFU+dawkAQjEDEoDQhxkoHNSoqsQEqNTRRLDRl3v85vEtySQj5dH/czu7MXbZ84Thmax6vj1/3bwiBTc7FtoIhMAtHok56W9DoWFzckSjY3Vvm9w9I8vAokSQ4lc5kSZTL2/kCcHxixalTGTg7t94n9y+KS09eXgHXZiQQ3llUiQcUVn8Ix0WngAsAN0YZQcD8/u3dFoMicK/PJ4RD814BDwyWeWQ14AGOTEEFVRPngEfqvUDCVfAEPFPvQyzpKqgBdep5xPX6CpVKJYQGOZstmmir6FC/DlET3MGyrpbpoU+dHzv6OB6q1WoDA3K+DGliCAjUb0BKudbwCrwZg067CkbAuzHTjKugD7lE/WYYWfMbTbww+NEw2uMiRr/UWt2hgT59wJcOo7uQL1e2OQYmDO8BVyUHP50hPLevhQ/Y6c/xDPi24vwZmZ5YNuMPHx2n9GMpzq9Jgs891drc8HXUb5Bf41uCpNgeVW60Jag9fRmTOfcjQZ3aFPn7LFuVHNf6U1Soi6XKH5/rnb7w9s46mq4onLYgCuU/xeBPAacM6r+LuGNk6Q//fwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNy0wNi0yNlQxNjoyOTozNSswMjowMOr839AAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTctMDYtMjZUMTY6Mjk6MzUrMDI6MDCboWdsAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg==')
+				transform translateY(280px)
+			&hover
+				border-color #ffc501
+				&before,
+				&after
+					opacity 1
+				&after
+					transform translateY(0)
+	.slick-arrow
+		width 30px
+		height 35px
+		transition all 0.225s ease
+		position absolute
+		background black center no-repeat
+		background-size 13px 23px
+		&hover
+			background-color $yellow
+		&before
+			display none
+	.slick-prev
+		background-image url("dataimage/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")
+		left 10px
+		right auto
+	.slick-next
+		background-image url("dataimage/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")
+		right 10px
+		left auto
+
+/* reviews
+====================================================================================================*/
+
+.reviews
+	background-image url(../img/reviews/bg.jpg)
+	background-size cover
+	background-position top center
+	padding 80px 0 160px
+	h2
+		margin-bottom 32px
+	//.slick-slide
+		//margin-right 150px
+	&-item
+		padding 30px 30px
+		&hover
+			.reviews_photo
+				border-color #ffc501
+	&_msg
+		width 66.66666667%
+		position relative
+		margin-right 30px
+		&before
+			position absolute
+			content ''
+			display block
+			width 60px
+			height 60px
+			background-color #ffc501
+			border-radius 50%
+			background-image url(../img/reviews/coma.png)
+			background-repeat no-repeat
+			background-position center
+			left -10px
+			top -30px
+			z-index 2
+	&_author
+		width 33.33333333%
+	&_text
+		background-color white
+		padding 25px 30px 25px 35px
+		height 350px
+		overflow-y auto
+		font-size 16px
+	&_photo
+		height 250px
+		border 4px solid white
+		background-size cover
+		background-position top center
+		transition all 0.225s ease
+		&__1
+			background-image url("../img/reviews/photo1.png")
+		&__2
+			background-image url("../img/reviews/photo2.png")
+		&__3
+			background-image url("../img/reviews/photo3.png")
+		&__4
+			background-image url("../img/reviews/photo4.png")
+	&_name
+		font-size 21px
+		font-weight bold
+		color #343434
+		text-transform uppercase
+		margin-top 26px
+	.slick-arrow
+		width 30px
+		height 35px
+		transition all 0.225s ease
+		position absolute
+		background black center no-repeat
+		background-size 13px 23px
+		top initial
+		bottom -75px
+		&hover
+			background-color $yellow
+		&before
+			display none
+	.slick-prev
+		background-image url("dataimage/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")
+		left 530px
+	.slick-next
+		background-image url("dataimage/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")
+		right 530px
+
+/* contacts
+====================================================================================================*/
+.contacts
+	&-bar
+		background-color #ffc501
+		padding 52px 0
+		text-transform uppercase
+		.items
+			justify-content space-between
+	&-item
+		position relative
+		width 33%
+		&_text
+			color #343434
+			font-size 16px
+			font-weight bold
+			text-decoration none
+			margin-left 25px
+		&_icon
+			width 24px
+			position relative
+			top 10px
+			&after
+				display block
+				content ''
+				width 49px
+				height 49px
+				background-image url(../img/contacts/braces.png)
+				position absolute
+				margin-left -12px
+				top 50%
+				margin-top -25px
+				transition all 0.225s ease
+		&hover
+			.contacts-item_icon
+				&after
+					transform rotate(90deg)
+
+.map
+	height 620px
+	filter grayscale(100%)
+
+/* footer
+====================================================================================================*/
+
+.footer
+	padding 40px 0 30px
+	background-color #343434
+	.items
+		justify-content space-between
+	.item
+		width 33%
+	.brand
+		&_logo
+			display block
+			width 204px
+			height 25px
+			margin-top 7px
+			background-image url(../img/footer/logo.png)
+			background-size contain
+			background-repeat no-repeat
+		&_slogan
+			font-size 15.4px
+			color white
+	.developer
+		color white
+		font-size 16px
+		margin-top 23px
+		text-align center
+		&_name
+			color $yellow
+	.social-links
+		margin-top 7px
+		text-align right
+		&_link
+			width 40px
+			height 40px
+			background-position center
+			background-repeat no-repeat
+			display inline-block
+			background-color #ffc501
+			margin 0 2px
+			transition all 0.225s ease
+			&hover
+				background-color white
+			&__vk
+				background-image url(../img/footer/vk.png)
+			&__fb
+				background-image url(../img/footer/fb.png)
+			&__tw
+				background-image url(../img/footer/tw.png)
+			&__inst
+				background-image url(../img/footer/inst.png)
+			&__od
+				background-image url(../img/footer/od.png)
+			&__pin
+				background-image url(../img/footer/pin.png)
