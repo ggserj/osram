@@ -2,13 +2,37 @@ $(document).ready(function(){
 
 //........................................home.........................................
 
+	var burger = $('.nav-burger');
+	var navMenu = $('.nav_ul-wrap');
+
+	burger.click(function() {
+		burger.prop('disabled', 'true');
+		burger.toggleClass('nav-burger__active');
+		navMenu.slideToggle(250);
+		setTimeout(function () { burger.removeAttr('disabled') }, 250);
+	});
+
 	$('.advantages_slider').slick({
 		infinite: true,
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		autoplay: false,
 		cssEase: 'ease-out',
-		speed: 300
+		speed: 300,
+		responsive: [
+			{breakpoint: 1280,
+				settings: {
+					slidesToShow: 3
+				}},
+			{breakpoint: 940,
+				settings: {
+					slidesToShow: 2
+				}},
+			{breakpoint: 665,
+				settings: {
+					slidesToShow: 1
+				}}
+		]
 	});
 
 //........................................hits.........................................
@@ -258,7 +282,17 @@ $(document).ready(function(){
 		autoplay: false,
 		cssEase: 'ease-out',
 		speed: 300,
-		arrows: true
+		arrows: true,
+		responsive: [
+			{breakpoint: 940,
+				settings: {
+					slidesToShow: 2
+				}},
+			{breakpoint: 665,
+				settings: {
+					slidesToShow: 1
+				}}
+		]
 	});
 
 //........................................reviews.........................................
@@ -270,7 +304,13 @@ $(document).ready(function(){
 		autoplay: false,
 		cssEase: 'ease-out',
 		speed: 300,
-		arrows: true
+		arrows: true,
+		responsive: [
+			{breakpoint: 1199,
+				settings: {
+					slidesToShow: 1
+				}}
+		]
 	});
 
 //........................................contacts.........................................
