@@ -188,13 +188,15 @@ h2
 			right 0
 			bottom 0
 			width 100%
+			@media (max-width 767px)
+				display none
 		&:after
 			position absolute
+			content ''
 			top 0
 			left 0
 			right 0
 			bottom 0
-			content ''
 			background-color rgba(0, 0, 0, 0.86)
 		&_lamps
 			position relative
@@ -202,6 +204,8 @@ h2
 			height: 100%
 			left: calc(50% - 960px)
 			z-index 1
+			@media (max-width 961px)
+				display none
 		&_lamp1
 			position absolute
 			width 109px
@@ -240,6 +244,8 @@ h2
 			right 138px
 			background-image url(../img/header/lamp6.png)
 			animation lamp6Move 14s ease infinite
+			@media (max-width 1535px)
+				display none
 	.topbar
 		padding 1.5rem 0
 		background-color rgba(0, 0, 0, 0.5)
@@ -324,10 +330,17 @@ h2
 				flex-direction column
 				align-items center
 			&-wrap
+				background-color $yellow
+				z-index 10
 				@media (max-width 899px)
+					position absolute
 					display none
+					top 100%
+					left 0
+					right 0
 					border-top 1px solid black
 				@media (min-width 900px)
+					position relative
 					display block !important
 		&_li
 			@media (max-width 899px)
@@ -760,7 +773,8 @@ h2
 	&-agree
 		position relative
 		display block
-		margin 0 0 30px 8px
+		margin-bottom 30px
+		padding-left 8px
 		font-size 16px
 		font-weight 400
 		text-align center
@@ -783,6 +797,7 @@ h2
 			left 0
 			right 0
 			bottom 27px
+			z-index 1
 			padding 10px
 			border-radius 6px
 			font-size 12px
@@ -991,6 +1006,8 @@ h2
 			color white
 			@media (max-width 599px)
 				margin 0
+			@media (max-width 479px)
+				font-size 14px
 			&:before
 				position absolute
 				display block
@@ -1079,6 +1096,8 @@ h2
 			margin 1.5625rem 0 1.25rem
 			font-size 1.5rem
 			color white
+			@media (max-width 659px)
+				font-size 16px
 		&_value
 			display inline-block
 			min-width 5rem
@@ -1116,26 +1135,25 @@ h2
 				width 100%
 				flex-basis initial
 	&_btn
-		height 3.4375rem
 		.btn_span
-			width 15.625rem
-			padding 0.8125rem 0
-			font-size 1.5rem
+			width 250px
+			padding 13px 0
+			font-size 24px
 		&__disabled
 			opacity 0.5
 			pointer-events none
 			cursor default
 	&_units
 		display inline-block
-		font-size 1.25rem
-		line-height 3.4375rem
+		font-size 20px
+		line-height 55px
 		color white
 	&-switch
 		position relative
 		display inline-block
-		width 3.75rem
-		height 2.25rem
-		margin 0.5625rem 0.3125rem
+		width 60px
+		height 36px
+		margin 9px 5px
 		&_checkbox
 			display none
 			&:checked + .calculator-switch_slider:after
@@ -1157,15 +1175,16 @@ h2
 			&:after
 				position absolute
 				content ''
-				width 1.625rem
-				height 1.625rem
-				left 0.125rem
-				bottom 0.1875rem
+				width 26px
+				height 26px
+				left 2px
+				bottom 3px
 				border-radius 50%
 				background-color $yellow
 				transition .225s
 	&-timeline
 		display flex
+		margin-left 10px
 		&__disabled
 			pointer-events none
 			cursor default
@@ -1216,7 +1235,7 @@ h2
 				&:after
 					color white
 	&-total
-		margin-top 5rem
+		margin-top 60px
 		opacity 0
 		transform scale(0.4)
 		transition .225s
@@ -1230,11 +1249,18 @@ h2
 			font-weight bold
 			&__white
 				color white
+			@media (max-width 659px)
+				font-size 16px
+				margin 0 0 5px
 		&_value
 			font-size 2rem
+			@media (max-width 659px)
+				font-size 16px
 		&_ruble
 			font-size 2rem
 			font-weight normal
+			@media (max-width 659px)
+				font-size 16px
 		&_link
 			margin 0.625rem auto 2.8125rem
 			font-size 18px
