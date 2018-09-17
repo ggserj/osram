@@ -1,16 +1,8 @@
 {
   "name": "osram",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "gulp": "^3.9.1"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.24.5",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-stylus": "^2.7.0"
-  },
+  "description": "Сайт лендинг для резюме",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,10 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/ggserj/osram.git"
   },
-  "author": "",
+  "author": "ggserj",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ggserj/osram/issues"
   },
-  "homepage": "https://github.com/ggserj/osram#readme"
+  "homepage": "https://github.com/ggserj/osram#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
 }
